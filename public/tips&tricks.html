@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tips &amp; Tricks</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
+<!--    <script src="jquery-3.2.1.min.js"></script>-->
+    <!--- Style Sheet --->
+    <link rel="stylesheet" href="css/tipsandtricks.css">
+    <link href="css/nav.css" rel="stylesheet" type="text/css">
+	<!-- Custom Fonts -->
+<!--	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/whhg.css">-->
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="index.css">
+    
+    <style>
+      .slideout-menu { left: auto; }
+      .btn-hamburger { left: auto; right: 12px;}
+      .box { height: 1500px; }
+    </style>
+    
+</head>
+<body>
+    
+    <nav id="menu" class="menu">
+        <header class="menu-header"></header>
+        <section class="menu-section">
+            <h3 class="menu-section-title">Navigation</h3>
+            <ul class="menu-section-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fridgeMain.html">Fridge Contents</a></li>
+                <li><a href="fridge.html">Add Ingredients</a></li>
+                <li><a href="logIn.html">Sign In</a></li>
+                <li><a href="registermvp.html">Register</a></li>   
+                <li><a href="realRecipes.html">Recipes</a></li>
+                <li><a href="tips&tricks.html">Tips &amp; Tricks</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="affiliated.html">Affiliated Apps</a></li>
+            </ul>
+        </section>
+    </nav> 
+    
+    <main id="panel" class="panel">
+      <header class="panel-header">
+          <div class="wedaBest col-md-12">
+              <div class="img-container col-xs-1 col-md-1">
+                  <a href="index.html"><div class="mvf">MV<div class="mvf1">F</div></div></a>
+              </div>
+          </div>
+          <button class="btn-hamburger js-slideout-toggle">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+      </header>
+
+      
+    <script src="dist/slideout.js"></script>
+    <script>
+      window.onload = function() {
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'side': 'right'
+        });
+
+        document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+          slideout.toggle();
+        });
+
+        document.querySelector('.menu').addEventListener('click', function(eve) {
+          if (eve.target.nodeName === 'A') { slideout.close(); }
+        });
+      };
+    </script>
+    <!-- End of Slider -->    
+        
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="title-container">
+                <p class="stretch">Keep your food fresh.</p>
+            </div>
+        </div>
+    </div>
+        
+    <div class="panel-group" id="accordion">
+   <div class="container">
+       <div class="row">
+           <div data-parent="#accordion" data-toggle="collapse" data-target="#demo" class=" article-bg-fridge">
+              
+                   <div class="article">
+                       <p class="col-md-11 col-xs-10">Organize Your Fridge
+                           
+                       </p>
+                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">
+                           </i>
+                   </div>
+             </div>
+           
+                    <div id="demo" class="collapse content-text">&#9679;	<strong>Top Shelf</strong> – The top shelf is the warmest part of the fridge compartment and best for pre-prepared foods such as yogurt, cheese and sauces. Store cooked meat and leftovers in sealed containers on the shelves underneath. If there’s space, keep milk here too – it’ll keep for longer than it would in the door rack where it’s warmed by hot air whenever the door is opened.<br><br>
+                        &#9679;	<strong>Bottom</strong> shelf – This is the coldest part of the fridge, so keep raw meat, fish and poultry in its sealed packaging, or place it in sealed containers and store on the bottom shelf. Plus, there’s less risk of raw juices dripping onto ready-to-eat foods.<br><br>
+                        &#9679;	<strong>Salad crisper drawer</strong> – Store fruit and vegetables in the salad crisper drawer. Some come with humidity controls to retain moisture which will help certain vegetables, such as lettuce, cucumber, cauliflower, broccoli, beans, carrots and leafy veg, last longer.<br><br>
+                        &#9679;	<strong>Door racks</strong> – The temperature in the door racks can fluctuate because they’re exposed to the warm air of the kitchen when the door is opened. The door racks are a good place for condiments, jam and fruit juice. A lidded compartment is ideal for keeping butter and margarine extra cold.
+</div>
+        
+       </div>
+    </div>
+    
+    <div class="container">
+       <div class="row">
+        <div class=" article-bg-bread" data-parent="#accordion" data-toggle="collapse" data-target="#demo1"><div class="article">
+                       <p class="col-md-11 col-xs-10">Bread Tips
+                       </p>
+                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">
+                           </i>
+                   </div>
+        </div>
+           <div id="demo1" class="collapse content-text"> &#9679; If your bread is starting to go stale just add a rib of celery to the bread's plastic bag, seal, and let it sit overnight. In the morning, the bread should be as fresh as when originally purchased</div>
+       </div>
+    </div>
+    <div class="container">
+       <div class="row">
+        <div class="article-bg-rice" data-parent="#accordion" data-toggle="collapse" data-target="#demo2"><div class="article">
+                       <p class="col-md-11 col-xs-10">Keep Rice From Sticking
+                           
+                       </p>
+                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">
+                           </i>
+                   </div>
+        </div>
+           <div id="demo2" class="collapse content-text"> &#9679; A few drops of lemon juice added to simmering rice will keep the grains separate - just a few though.</div>
+       </div>
+    </div>
+        <div class="container">
+       <div class="row">
+        <div class=" article-bg-eggs" data-parent="#accordion" data-toggle="collapse" data-target="#demo3"><div class="article">
+                       <p class="col-md-11 col-xs-10">Freshness of Eggs
+                           
+                       </p>
+                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">
+                           </i>
+                   </div>
+        </div>
+           <div id="demo3" class="collapse content-text"> &#9679; If you aren't sure how fresh your eggs are, place them in about four inches of water.<br><br> 
+ &#9679; Eggs that stay on the bottom are fresh.<br><br>
+ &#9679; If only one end tips up, the egg is less fresh and should be used soon.<br><br>
+ &#9679; If it floats, it’s past the fresh stage.<br><br>
+</div>
+       </div>
+    </div>
+        <div class="container">
+       <div class="row">
+        <div class=" article-bg-banana" data-parent="#accordion" data-toggle="collapse" data-target="#demo4"><div class="article">
+                       <p class="col-md-11 col-xs-10">Extend Your Banana Life
+                           
+                       </p>
+                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">
+                           </i>
+                   </div>
+        </div>
+           <div id="demo4" class="collapse content-text"> &#9679; Wrap the top of the banana bunch with Plastic Wrap, and they will last 3-5 Days longer than usual</div>
+       </div>
+    </div>
+        <div class="container">
+       <div class="row">
+        <div class=" article-bg-meat" data-parent="#accordion" data-toggle="collapse" data-target="#demo5"><div class="article">
+                       <p class="col-md-11 col-xs-10">Meats, Fish and Eggs
+                           
+                       </p>
+                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">
+                           </i>
+                   </div>
+        </div>
+           <div id="demo5" class="collapse content-text"> &#9679; Store eggs in their original carton. If you’re unsure of an egg’s freshness, see how it behaves in a cup of water: Fresh eggs sink; bad ones float.<br><br>
+ &#9679; Meat &amp; poultry should be kept in its original package if you’ll use it within 2 days. (Re-wrapping increases the risk of exposing the food to harmful bacteria.) <br><br>
+               &#9679; Otherwise, wrap it in foil and freeze. Wrap smoked meats (bacon, ham, etc.) in a vinegar soaked cloth then in wax paper and store in the fridge. Bacon can be frozen for up to a month.<br><br>
+ &#9679; Fish should be kept in a bag on top of a bowl of ice and eaten as soon as possible. You can also freeze fish or broil it and store in the fridge.
+</div>
+       </div>
+    </div>
+        <div class="container">
+       <div class="row">
+        <div class=" article-bg-cereal" data-parent="#accordion" data-toggle="collapse" data-target="#demo6"><div class="article">
+                       <p class="col-md-11 col-xs-10">Breads and Ceareals
+                           
+                       </p>
+                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">
+                           </i>
+                   </div>
+        </div>
+           <div id="demo6" class="collapse content-text"> &#9679; Freeze flour for 48 hours to kill any insect eggs that might be present. Then, place in a tight-sealing container; and store in a cool, dry spot away from sunlight.<br><br>
+ &#9679; To help ward off weevils, try slipping a bay leaf into your storage container. The scent of the bay leave will help repel the bugs.<br><br>
+&#9679; Contrary to popular belief, storing bread in the refrigerator actually makes it spoil more quickly. Your best bet is to store bread on the kitchen counter in a tightly sealed bag or container.<br><br>
+ &#9679; Avoid tossing stale snacks, pasta, half-empty bags of cereal, pretzels and other dry foods by transferring into air-tight containers after opening the original packaging. Mason jars make great air-tight pantry storage.<br><br>
+               
+ &#9679; To revive day-old muffins, sprinkle them with water, place in a paper bag, and pop in a hot oven for five to 10 minutes. The steam created by the water will restore moisture
+</div>
+       </div>
+    </div>
+        <div class="container">
+       <div class="row">
+        <div class=" article-bg-cheese" data-parent="#accordion" data-toggle="collapse" data-target="#demo7"><div class="article">
+                       <p class="col-md-11 col-xs-10">Dairy Products
+                           
+                       </p>
+                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">
+                           </i>
+                   </div>
+        </div>
+           <div id="demo7" class="collapse content-text"> &#9679; Keep milk in the main part of the fridge compartment if you have the space. When milk is stored in the door rack it’s warmed by the ambient air of the kitchen whenever the fridge door is opened.<br><br>
+ &#9679; Make sure to wrap all cheese securely in wax paper or cheese paper before storing it in the refrigerator, which allows it to breathe without letting in excess moisture or odors from your fridge. You can also rub butter on the cut parts of hard cheeses to prevent them from drying out. You can also freeze cheese!<br><br>
+ &#9679; In order to make cottage cheese or sour cream last longer, place the container upside down in the fridge. Inverting the tub creates a vacuum that inhibits the growth of bacteria that causes food to spoil.<br><br>
+ &#9679; Store butter in its original packaging. Stock up on butter when it’s on sale – you can store it in the freezer for up to six months. Pack the butter in an airtight container, so it doesn’t take on the flavor of whatever else you’re freezing.
+</div>
+       </div>
+    </div>
+        <div class="container">
+       <div class="row">
+        <div class=" article-bg-fruit" data-parent="#accordion" data-toggle="collapse" data-target="#demo8"><div class="article">
+                       <p class="col-md-11 col-xs-10">Fruits and Vegetables
+                           
+                       </p>
+                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">
+                           </i>
+                   </div>
+        </div>
+           <div id="demo8" class="collapse content-text">&#9679; Line the bottom of your refrigerator’s crisper drawer with paper towels. They’ll absorb the excess moisture that causes veggies to rot.<br><br>
+ &#9679; Wash berries in water with just a bit of vinegar before popping them into the fridge.  Berries (blueberries, strawberries, raspberries) should be stored in their plastic container or a re-sealable plastic bag in the back of the refrigerator.C<br><br>
+ &#9679; Lettuce needs moisture to stay fresh and will quickly wilt if it dehydrates. Wrap lettuce in damp paper towels and store in a plastic bag. If salad greens begin to wilt, soak them in ice water to crisp them up before fixing a salad.<br><br>
+ &#9679; To keep fresh celery, carrots and radishes around at all times, chop them and store them in water in the fridge, which keeps them crisp for a surprisingly long time.
+ &#9679; Prevent mushrooms from getting slimy by wrapping them in paper towels before refrigerating.<br><br>
+ &#9679; Roast slices or chunks of about-to-go-bad tomatoes, then store them in olive oil in the fridge, where they’ll keep for about a week.<br><br>
+ &#9679; After trimming the ends, store kale, collards and Swiss chard in the fridge in a glass of water with a loose bag over the top.<br><br>
+ &#9679; Rub whole summer and winter squash with vegetable oil and store them in the pantry, where they’ll last for several months.<br><br>
+ &#9679; Keep apples away from other foods. Apples give off ethylene gas, which can cause foods to spoil. If they get too soft, just cook them!<br><br>
+ &#9679; Avoid separating bananas until you plan to eat them – they spoil less quickly in a bunch. Store bananas at room temperature until they ripen. Freeze over-ripened bananas for use in banana bread and other baked goods.<br><br>
+ &#9679; Triple the life of scallions by storing them in a jar of water on the counter. The green onions will keep growing as you snip the tips for fresh eating.<br><br>
+ &#9679; Asparagus will last longer if its thick ends sit in cold water.<br><br>
+ &#9679; Do not store garlic in a sealed container. Fresh bulbs can be stored in a wire or mesh basket or even a paper bag.<br><br>
+ &#9679; Store avocadoes un-bagged in the refrigerator.<br><br>
+</div>
+       </div>
+    </div>
+    </div>    
+    </main>
+    </body>
+</html>
