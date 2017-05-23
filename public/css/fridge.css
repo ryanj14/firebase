@@ -125,21 +125,30 @@ height:40px;
     text-align:right;
 }
 
-<<<<<<< HEAD
-.food-holder{height:25px;
-background-color: #aeaff2;
+
+.food-holder{
+    
+    padding-top:5px
+    padding-bottom:5px;    
+    height:40px;
+background-color: #eaeff2;
+
 }
 
 .input-holder{
-    
+    right: 0;
     display:inline;
 }
 
 .food-amount{
     width:30px;
+    margin-right:5px;
 }
 
 .food-expiry{ width:30px;
     
 }
 
+.food-name{
+    padding-left:0 !important;
+}
