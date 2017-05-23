@@ -42,6 +42,10 @@
 </head>
 <body>
     
+         <div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
+    
     <!--- JQuery slider begins here --->
     <nav id="menu" class="menu">
         <header class="menu-header"></header>
@@ -116,3 +120,15 @@
     <div class="col-md-4 push-md-5"></div>
     <div class="aboutus-para col-xs-12 col-md-4 pull-md-5">Our beliefs that we can do more to reduce our food waste. We want to take that initial first step to work towards that goal of reducing food waste.</div>
     </main>
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- Preloader -->
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(350).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
