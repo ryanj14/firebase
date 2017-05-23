@@ -44,8 +44,8 @@
     function add() {
         
         var data = {
-            amount: document.getElementById('addd').value,
-            expiry: document.getElementById('wing').value
+            amount: document.getElementById('number').value,
+            expiry: document.getElementById('expiry').value
             
         }
         console.log(firebase);
@@ -173,8 +173,8 @@
     <div class=" food-holder">
         <div class="col-md-2 col-xs-3 food-name"><strong>Carrots</strong></div>
     <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount" id="addd">
-        <label>Expiry</label><input type="text" class="food-expiry" id="wing">
+        <label>#</label><input type="text" class="food-amount" id="number">
+        <label>Expiry</label><input type="text" class="food-expiry" id="expiry">
        </div>
          <div class="col-xs-1"><input type="submit" value="Add" onclick="add()"></div>
     </div>
