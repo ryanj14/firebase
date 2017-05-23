@@ -37,7 +37,76 @@
       .btn-hamburger { left: auto; right: 12px;}
       .box { height: 1500px; }   
     </style>
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBakaFIMGbUxPiCMYRqi6NKkeNgcJBJcZQ",
+    authDomain: "my-virtual-fridge-6ff0b.firebaseapp.com",
+    databaseURL: "https://my-virtual-fridge-6ff0b.firebaseio.com",
+    projectId: "my-virtual-fridge-6ff0b",
+    storageBucket: "my-virtual-fridge-6ff0b.appspot.com",
+    messagingSenderId: "520914821066"
+  };
     
+  firebase.initializeApp(config);
+    database = firebase.database();
+    
+    var ref = database.ref('fridge');
+    ref.on('value', gotData, errData);
+    
+    function gotData(data) {
+      //  console.log(data.val());
+        var fridge = data.val();
+         var keys = Object.keys(fridge);
+        console.log(keys);
+        
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+            
+            var amount = fridge[k].amount;
+            var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+            var li = document.createElement("li")
+            var t = document.createTextNode(amount + ': ' + expiry);
+            li.appendChild(t);
+            li.parentElement('fridgelist');   
+            
+          
+           
+            
+        
+            
+            
+        }
+        
+        
+    }
+    
+    function  addElement() {
+        
+          var newDiv = document.createElement("div");
+            var newContent = document.createTextNode("Succ this fucking dick");
+            newDiv.appendChild(newContent);
+            
+            
+        
+        
+    }
+    
+    function errData(err) {
+        console.log("Error!");
+        console.log(err);
+       
+        
+    }
+    
+    
+    
+    
+    </script>
 <!-- highlights the selected food icons so users can tell what they've selected -->
     <script>
 
@@ -150,6 +219,11 @@
     
 
     </div>
+        
+        <ol id="fridgelist">
+        
+        </ol>
+
     
         
          <div class="fixPosition" class="panel-footer-fridge"><button id="removeButton">Get Recipes</button></div><div class="fixPosition" class="panel-footer-fridge"><button id="recipeButton">Remove</button></div>
