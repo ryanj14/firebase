@@ -150,14 +150,14 @@
           if (eve.target.nodeName === 'A') { slideout.close(); }
         });
       };
+        
+        
+        function clear(){
+           var form = document.getElementById('#submit');
+            form.reset;
+        }
     </script>
-        <div class="col-md-5 col-xs-4 search-recipe">
-        </div>
-
-       
-
-        <button type="button" class="btn btn-success recipe-button col-md-2 col-xs-4" id="buttons">Add to Fridge</button>
-
+        
         
         <div class="something col-md-12">  
     <button class="accordion">
@@ -170,159 +170,26 @@
      
 
 <div class="panel">
+    <form>
     <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Carrots</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount" id="number">
-        <label>Expiry</label><input type="text" class="food-expiry" id="expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add" onclick="add()"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Cucumber</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Lettuce</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Mushrooms</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Onion</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Peppers</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Peas</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Corn</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Raddish</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Potato</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    
+        <div class="col-md-2 col-xs-3 food-name">           <strong>Enter a Vegetable:</strong>
+            <input type="text" >
         </div>
-
-
-
-
-    <button class="accordion"><div class="col-md-11 col-xs-10">MEATS</div><div class="col-md-1 col-xs-1 icon-move"><i class="fa fa-chevron-down" aria-hidden="true"></i></div></button>
-<div class="panel">
-  
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Chicken</strong></div>
     <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
+            <label>#</label>
+        <input type="text" class="food-amount" id="number">
+            <label>Expiry</label>
+        <input type="text" class="food-expiry" id="expiry">
     </div>
-    
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Fish</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
+         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="add()" onclick="clear()" id="submit"></div>
     </div>
-    
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Pork</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Potato</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Potato</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
-    <div class=" food-holder">
-        <div class="col-md-2 col-xs-3 food-name"><strong>Potato</strong></div>
-    <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
-       </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
-    </div>
+   
+    </form>
 </div>
 
             <button class="accordion"><div class="col-md-11 col-xs-10">FRUITS</div><div class="col-md-1 col-xs-1 icon-move"><i class="fa fa-chevron-down" aria-hidden="true"></i></div></button>
 <div class="panel">
  
-    <input onclick="selected()" class="click" type="image" src="images/fruit/001-banana.png" />
-    <input onclick="selected()" class="click" type="image" src="images/fruit/017-fruit.png" />
-    <input onclick="selected()" class="click" type="image" src="images/fruit/012-grapes.png" />
-    <input onclick="selected()" class="click" type="image" src="images/fruit/005-pineapple.png" />
-    <input onclick="selected()" class="click" type="image" src="images/fruit/006-raspberry.png" />
-    <input onclick="selected()" class="click" type="image" src="images/fruit/021-apple.png" />
-    <input onclick="selected()" class="click" type="image" src="images/fruit/018-orange.png" />
-    <input onclick="selected()" class="click" type="image" src="images/fruit/015-fruit-1.png" />
-    <input onclick="selected()" class="click" type="image" src="images/fruit/017-strawberry.png" />
 </div>
             <button class="accordion">
                 <div class="col-md-11 col-xs-10">GRAINS
@@ -332,10 +199,7 @@
                 </div>
             </button>
 <div class="panel">
-   <input onclick="selected()" class="click" type="image" src="images/grains/008-food-1.png" />
-    <input onclick="selected()" class="click" type="image" src="images/grains/007-food-2.png" />
-    <input onclick="selected()" class="click" type="image" src="images/grains/005-food-4.png" />
-    <input onclick="selected()" class="click" type="image" src="images/meats/009-food.png" />
+
 </div>
             
     <button class="accordion">
@@ -348,12 +212,9 @@
             
             
 <div class="panel">
-    <input onclick="selected()" class="click" type="image" src="images/dairy/019-cheese.png" />
-    <input onclick="selected()" class="click" type="image" src="images/dairy/yogurt.jpg" style="background-color:#A1A194" />
-    <input onclick="selected()" class="click" type="image" src="images/dairy/milk3.jpg" />
-    <input onclick="selected()" class="click" type="image" src="images/dairy/butter8.jpg" />
+    
 </div>        
-</div>
+
         
  
     

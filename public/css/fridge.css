@@ -141,19 +141,15 @@ height:40px;
 }
 
 .food-holder{
-    
-
     padding-top:5px;
     padding-bottom:5px;    
-    height:40px;
-
-
-
+    height:100px;
 }
 
 .input-holder{
     right:0;
     display:inline;
+    padding-top:40px;
 }
 
 .food-amount{
@@ -166,5 +162,8 @@ height:40px;
 }
 
 .food-name{
+    padding-top:20px;
     padding-left:0 !important;
 }
+
+.submit-button{padding-top:40px;}
