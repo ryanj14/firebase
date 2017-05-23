@@ -18,6 +18,43 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBakaFIMGbUxPiCMYRqi6NKkeNgcJBJcZQ",
+    authDomain: "my-virtual-fridge-6ff0b.firebaseapp.com",
+    databaseURL: "https://my-virtual-fridge-6ff0b.firebaseio.com",
+    projectId: "my-virtual-fridge-6ff0b",
+    storageBucket: "my-virtual-fridge-6ff0b.appspot.com",
+    messagingSenderId: "520914821066"
+  };
+    
+
+    
+    
+  firebase.initializeApp(config);
+    
+    console.log(firebase);
+    
+    var database = firebase.database();
+    var ref = database.ref('fridge');
+    
+    
+    function add() {
+        
+        var data = {
+            amount: document.getElementById('number').value,
+            expiry: document.getElementById('expiry').value
+            
+        }
+        console.log(firebase);
+        var ref = database.ref('fridge');
+        ref.push(data);
+    }
+    
+    
+</script>
     <!-- jQuery slider -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="cleartype" content="on">
@@ -136,10 +173,10 @@
     <div class=" food-holder">
         <div class="col-md-2 col-xs-3 food-name"><strong>Carrots</strong></div>
     <div class="col-md-5 col-xs-7 input-holder">
-        <label>#</label><input type="text" class="food-amount">
-        <label>Expiry</label><input type="text" class="food-expiry">
+        <label>#</label><input type="text" class="food-amount" id="number">
+        <label>Expiry</label><input type="text" class="food-expiry" id="expiry">
        </div>
-         <div class="col-xs-1"><input type="submit" value="Add"></div>
+         <div class="col-xs-1"><input type="submit" value="Add" onclick="add()"></div>
     </div>
     <div class=" food-holder">
         <div class="col-md-2 col-xs-3 food-name"><strong>Cucumber</strong></div>
