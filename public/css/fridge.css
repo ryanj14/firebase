@@ -123,6 +123,7 @@ height:40px;
     text-align:right;
 }
 
+
 .food-holder{
     height:40px;
     background-color: #A1A194;
@@ -138,18 +139,31 @@ height:40px;
     width: 100%;
     
     
+
+.food-holder{
+    
+    padding-top:5px;
+    padding-bottom:5px;    
+    height:40px;
+background-color: #eaeff2;
+
+
 }
 
 .input-holder{
-    
+    right: 0;
     display:inline;
 }
 
 .food-amount{
     width:30px;
+    margin-right:5px;
 }
 
 .food-expiry{ width:30px;
     
 }
 
+.food-name{
+    padding-left:0 !important;
+}
