@@ -79,9 +79,7 @@ button.accordion {
 }
 
 
-.something{
-    display: inline-block;
-}
+
 
 button.accordion:active {
     background-color: greenyellow;
@@ -127,9 +125,28 @@ height:40px;
 
 
 .food-holder{
+    height:40px;
+    background-color: #A1A194;
+    font-size: 20px;
+    color: #eaeff2;
+    padding: 0px !important;
+    width: 100%;
+}
+
+.something {
+    
+    padding: 0px !important;
+    width: 100%;
+    
+}
+
+.food-holder{
+    
+
     padding-top:5px;
     padding-bottom:5px;    
     height:40px;
+
 
 
 }
