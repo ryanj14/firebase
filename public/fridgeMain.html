@@ -70,7 +70,7 @@
             
         //   console.log(amount, expiry);
             var li = document.createElement("LI")
-            var t = document.createTextNode(amount + ': ' + expiry);
+            var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
             li.appendChild(t);
             document.getElementById("fridgelist").appendChild(li);   
             
@@ -83,16 +83,7 @@
         
     }
     
-    function  addElement() {
-        
-          var newDiv = document.createElement("div");
-            var newContent = document.createTextNode("Succ this fucking dick");
-            newDiv.appendChild(newContent);
-            
-            
-        
-        
-    }
+
     
     function errData(err) {
         console.log("Error!");
@@ -135,6 +126,10 @@
     </script>
 </head>
 <body id="length">
+    
+     <div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
     
     <nav id="menu" class="menu">
         <header class="menu-header"></header>
@@ -221,12 +216,24 @@
         <ol id="fridgelist">
         
         </ol>
-<button onclick="addElement()">TRY</button>
+
     
      
         
          <div class="fixPosition" class="panel-footer-fridge"><button id="removeButton">Get Recipes</button></div><div class="fixPosition" class="panel-footer-fridge"><button id="recipeButton">Remove</button></div>
     </main>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- Preloader -->
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(350).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
     </body>
 </html>
     
