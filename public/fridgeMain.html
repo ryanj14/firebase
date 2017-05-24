@@ -58,16 +58,21 @@
 
 
     
-    var ref = database.ref('Fruits');
-    ref.on('value', gotData);
   
-    
-    function gotData(data) {
+
+   
+
+    var ref = database.ref('Fridge/Vegetables');
+    ref.on('value', gotDataVeg);
+    function gotDataVeg(data) {
+        
+
       //  console.log(data.val());
-        var Fruits = data.val();
+        var Vegetables = data.val();
     //    var fridge = data.val();
-         var keys = Object.keys(Fruits);
+         var keys = Object.keys(Vegetables);
       //   var keys = Object.keys(fridge);
+
         console.log(keys);
         var num = 0;
         for (var i = 0; i < keys.length; i++) {
@@ -75,15 +80,23 @@
             var k = keys[i];
 
             
-            var name = Fruits[k].name;
-        //    var amount = fridge[k].amount;
-        //    var expiry = fridge[k].expiry;
+            var name = Vegetables[k].name;
+           var amount = Vegetables[k].amount;
+           var expiry = Vegetables[k].expiry;
 
         //    var name = [k].name;
           //  var amount = fridge[k].amount;
         //    var expiry = fridge[k].expiry;
 
             
+
+   
+            var li = document.createElement("li");
+            li.style.color = "white";
+            li.style.display = "block";
+            li.style.textAlign ="left";
+            
+
         //   console.log(amount, expiry);
         // makes new shelf after 4 items    
         if (num > 3 && num < 5) {
@@ -210,6 +223,7 @@
             if (i >= 9 && i < 12)
                 
                 document.getElementById("fridgelist3").appendChild(btn);
+
             
             if (i >= 12 && i < 15)
                 
@@ -222,27 +236,15 @@
             if (i >= 18 && i < 21)
                 
                 document.getElementById("fridgelist6").appendChild(btn);
-
+            
             if (i >= 21 && i < 24)
                 
                 document.getElementById("fridgelist7").appendChild(btn);
-            
-            
-            
+
+
             num++;
-        
         }
     }
-    
-    
-    
-    
-    
-   
-  
-
-    
-    
     
     
     </script>
@@ -332,9 +334,6 @@
         });
       };
     </script>
-    
-  
-    
 
           <div class="row">
               <div><ul id="fridgelist"></ul></div>
@@ -354,6 +353,7 @@
               <div><ul id="fridgelist7"></ul></div>
               <div id="newShelf7"></div>
     </div>
+
         
 
         

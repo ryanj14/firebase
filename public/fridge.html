@@ -38,22 +38,8 @@
     console.log(firebase);
     
     var database = firebase.database();
-    var ref = database.ref('score');
+    
 
-    var storage = firebase.storage();
-    
-    var ref = database.ref('fridge');
-
-    
-    var storageRef = firebase.storage().ref();
-    var breadRef = storageRef.child('images/bread.jpg');
-    
-    var file = fridge.html
-    ref.put(file).then(function(snapshot) {
-                       console.log('Uploaded a file');
-                       });
-    var pathReference = storage.ref('images/bread.jpg');
-    var gsReference = storage.refFromURL('gs://bucket/images/bread.jpg')
     
     function addVeg() {
         
@@ -64,7 +50,7 @@
             
         }
         console.log(firebase);
-        var ref = database.ref('Vegetables');
+        var ref = database.ref('Fridge/Vegetables');
         ref.push(data);
     }
     
@@ -77,7 +63,7 @@
             
         }
         console.log(firebase);
-        var ref = database.ref('Fruits');
+        var ref = database.ref('Fridge/Fruits');
         ref.push(data);
     }
     
@@ -90,7 +76,7 @@
             
         }
         console.log(firebase);
-        var ref = database.ref('Dairy');
+        var ref = database.ref('Fridge/Dairy');
         ref.push(data);
     }
     
@@ -103,7 +89,7 @@
             
         }
         console.log(firebase);
-        var ref = database.ref('Meats');
+        var ref = database.ref('Fridge/Meats');
         ref.push(data);
     }
     
@@ -118,7 +104,7 @@
             
         }
         console.log(firebase);
-        var ref = database.ref('Grains');
+        var ref = database.ref('Fridge/Grains');
         ref.push(data);
     }
     
