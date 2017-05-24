@@ -94,4 +94,6 @@ ul {
     border:1px solid white;
     min-height: 60px;
     height:auto;
+    color:white;
+    font-size:20px;
 }

@@ -67,7 +67,7 @@
         for (var i = 0; i < keys.length; i++) {
             
             var k = keys[i];
-            
+            var name = fridge[k].name;
             var amount = fridge[k].amount;
             var expiry = fridge[k].expiry;
             
@@ -77,7 +77,7 @@
             btn.style.display = "inline";
             
             
-            var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
+            var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
             btn.appendChild(t);
             document.getElementById("veggielist").appendChild(btn);   
         }
@@ -96,7 +96,7 @@
         for (var i = 0; i < keys.length; i++) {
             
             var k = keys[i];
-            
+             var name = fridge[k].name;
             var amount = fridge[k].amount;
             var expiry = fridge[k].expiry;
             
@@ -106,7 +106,7 @@
             btn.style.display = "inline";
             
             
-            var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
+          var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
             btn.appendChild(t);
             document.getElementById("fruitlist").appendChild(btn);   
         }
@@ -123,7 +123,7 @@
         for (var i = 0; i < keys.length; i++) {
             
             var k = keys[i];
-            
+             var name = fridge[k].name;
             var amount = fridge[k].amount;
             var expiry = fridge[k].expiry;
             
@@ -133,7 +133,7 @@
             btn.style.display = "inline";
             
             
-            var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
+           var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
             btn.appendChild(t);
             document.getElementById("grainlist").appendChild(btn);   
         }
@@ -149,7 +149,7 @@
         for (var i = 0; i < keys.length; i++) {
             
             var k = keys[i];
-            
+             var name = fridge[k].name;
             var amount = fridge[k].amount;
             var expiry = fridge[k].expiry;
             
@@ -159,7 +159,7 @@
             btn.style.display = "inline";
             
             
-            var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
+          var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
             btn.appendChild(t);
             document.getElementById("dairylist").appendChild(btn);   
         }
@@ -175,7 +175,7 @@
         for (var i = 0; i < keys.length; i++) {
             
             var k = keys[i];
-            
+             var name = fridge[k].name;
             var amount = fridge[k].amount;
             var expiry = fridge[k].expiry;
             
@@ -185,7 +185,7 @@
             btn.style.display = "inline";
             
             
-            var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
+           var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
             btn.appendChild(t);
             document.getElementById("meatlist").appendChild(btn);   
         }
