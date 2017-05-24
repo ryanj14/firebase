@@ -55,14 +55,14 @@
     database = firebase.database();
     
 
-    var ref = database.ref('Fruits')
-    // var ref = database.ref('fridge');
-    ref.on('value', gotData, errData);
+
 
     
-    var ref = database.ref('Vegetables');
-    ref.on('value', gotDataVeg);
-    function gotDataVeg(data) {
+    var ref = database.ref('Fruits');
+    ref.on('value', gotData);
+  
+    
+    function gotData(data) {
       //  console.log(data.val());
         var Fruits = data.val();
     //    var fridge = data.val();
@@ -79,9 +79,9 @@
         //    var amount = fridge[k].amount;
         //    var expiry = fridge[k].expiry;
 
-            var name = fridge[k].name;
-            var amount = fridge[k].amount;
-            var expiry = fridge[k].expiry;
+        //    var name = [k].name;
+          //  var amount = fridge[k].amount;
+        //    var expiry = fridge[k].expiry;
 
             
         //   console.log(amount, expiry);
@@ -218,133 +218,28 @@
             if (i >= 15 && i < 18)
                 
                 document.getElementById("fridgelist5").appendChild(btn);
-
-            
-            var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
-            btn.appendChild(t);
-            document.getElementById("veggielist").appendChild(btn);   
-        }
-    }
-    
-    
-    
-     var ref = database.ref('Fruits');
-    ref.on('value', gotDataFruit);
-    function gotDataFruit(data) {
-      //  console.log(data.val());
-        var fridge = data.val();
-         var keys = Object.keys(fridge);
-        console.log(keys);
-        
-        for (var i = 0; i < keys.length; i++) {
-            
-            var k = keys[i];
-             var name = fridge[k].name;
-            var amount = fridge[k].amount;
-            var expiry = fridge[k].expiry;
-            
-        //   console.log(amount, expiry);
-            var btn = document.createElement("BUTTON")
-            btn.style.color = "red";
-            btn.style.display = "inline";
-
             
             if (i >= 18 && i < 21)
                 
                 document.getElementById("fridgelist6").appendChild(btn);
-            
+
             if (i >= 21 && i < 24)
                 
                 document.getElementById("fridgelist7").appendChild(btn);
-                
             
-        
+            
+            
             num++;
-            
-          var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
-            btn.appendChild(t);
-            document.getElementById("fruitlist").appendChild(btn);   
+        
         }
     }
     
-    var ref = database.ref('Grains');
-    ref.on('value', gotDataGrain);
-     function gotDataGrain(data) {
-      //  console.log(data.val());
-        var fridge = data.val();
-         var keys = Object.keys(fridge);
-        console.log(keys);
-        
-        for (var i = 0; i < keys.length; i++) {
-            
-            var k = keys[i];
-             var name = fridge[k].name;
-            var amount = fridge[k].amount;
-            var expiry = fridge[k].expiry;
-            
-        //   console.log(amount, expiry);
-            var btn = document.createElement("BUTTON")
-            btn.style.color = "red";
-            btn.style.display = "inline";
-            
-            
-           var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
-            btn.appendChild(t);
-            document.getElementById("grainlist").appendChild(btn);   
-        }
-    }
-     var ref = database.ref('Dairy');
-    ref.on('value', gotDataDairy);
-    function gotDataDairy(data) {
-      //  console.log(data.val());
-        var fridge = data.val();
-         var keys = Object.keys(fridge);
-        console.log(keys);
-        
-        for (var i = 0; i < keys.length; i++) {
-            
-            var k = keys[i];
-             var name = fridge[k].name;
-            var amount = fridge[k].amount;
-            var expiry = fridge[k].expiry;
-            
-        //   console.log(amount, expiry);
-            var btn = document.createElement("BUTTON")
-            btn.style.color = "red";
-            btn.style.display = "inline";
-            
-            
-          var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
-            btn.appendChild(t);
-            document.getElementById("dairylist").appendChild(btn);   
-        }
-    }
-     var ref = database.ref('Meats');
-    ref.on('value', gotDataMeat);
-    function gotDataMeat(data) {
-      //  console.log(data.val());
-        var fridge = data.val();
-         var keys = Object.keys(fridge);
-        console.log(keys);
-        
-        for (var i = 0; i < keys.length; i++) {
-            
-            var k = keys[i];
-             var name = fridge[k].name;
-            var amount = fridge[k].amount;
-            var expiry = fridge[k].expiry;
-            
-        //   console.log(amount, expiry);
-            var btn = document.createElement("BUTTON")
-            btn.style.color = "red";
-            btn.style.display = "inline";
-            
-            
-           var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
-            btn.appendChild(t);
-            document.getElementById("meatlist").appendChild(btn);   
-        }
-    }
+    
+    
+    
+    
+   
+  
 
     
     
