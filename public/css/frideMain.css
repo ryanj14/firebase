@@ -93,10 +93,11 @@ ul {
     padding: 15px 0 0 0;
     margin: auto;
 }
-.shelf {
-    border-bottom: 30px solid #A1A194;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    top: -15px;
-    z-index: -1;
+
+.veggie-container{
+    border:1px solid white;
+    min-height: 60px;
+    height:auto;
+    color:white;
+    font-size:20px;
 }

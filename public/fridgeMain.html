@@ -54,11 +54,15 @@
   firebase.initializeApp(config);
     database = firebase.database();
     
+
     var ref = database.ref('Fruits')
     // var ref = database.ref('fridge');
     ref.on('value', gotData, errData);
+
     
-    function gotData(data) {
+    var ref = database.ref('Vegetables');
+    ref.on('value', gotDataVeg);
+    function gotDataVeg(data) {
       //  console.log(data.val());
         var Fruits = data.val();
     //    var fridge = data.val();
@@ -69,10 +73,16 @@
         for (var i = 0; i < keys.length; i++) {
             
             var k = keys[i];
+
             
             var name = Fruits[k].name;
         //    var amount = fridge[k].amount;
         //    var expiry = fridge[k].expiry;
+
+            var name = fridge[k].name;
+            var amount = fridge[k].amount;
+            var expiry = fridge[k].expiry;
+
             
         //   console.log(amount, expiry);
         // makes new shelf after 4 items    
@@ -181,6 +191,7 @@
             btn.style.marginLeft = "15px";
           
             
+
             var t = document.createTextNode(name);
             btn.appendChild(t);
             
@@ -207,6 +218,36 @@
             if (i >= 15 && i < 18)
                 
                 document.getElementById("fridgelist5").appendChild(btn);
+
+            
+            var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
+            btn.appendChild(t);
+            document.getElementById("veggielist").appendChild(btn);   
+        }
+    }
+    
+    
+    
+     var ref = database.ref('Fruits');
+    ref.on('value', gotDataFruit);
+    function gotDataFruit(data) {
+      //  console.log(data.val());
+        var fridge = data.val();
+         var keys = Object.keys(fridge);
+        console.log(keys);
+        
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+             var name = fridge[k].name;
+            var amount = fridge[k].amount;
+            var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "red";
+            btn.style.display = "inline";
+
             
             if (i >= 18 && i < 21)
                 
@@ -220,19 +261,91 @@
         
             num++;
             
+          var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
+            btn.appendChild(t);
+            document.getElementById("fruitlist").appendChild(btn);   
         }
-        
-        
     }
     
+    var ref = database.ref('Grains');
+    ref.on('value', gotDataGrain);
+     function gotDataGrain(data) {
+      //  console.log(data.val());
+        var fridge = data.val();
+         var keys = Object.keys(fridge);
+        console.log(keys);
+        
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+             var name = fridge[k].name;
+            var amount = fridge[k].amount;
+            var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "red";
+            btn.style.display = "inline";
+            
+            
+           var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
+            btn.appendChild(t);
+            document.getElementById("grainlist").appendChild(btn);   
+        }
+    }
+     var ref = database.ref('Dairy');
+    ref.on('value', gotDataDairy);
+    function gotDataDairy(data) {
+      //  console.log(data.val());
+        var fridge = data.val();
+         var keys = Object.keys(fridge);
+        console.log(keys);
+        
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+             var name = fridge[k].name;
+            var amount = fridge[k].amount;
+            var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "red";
+            btn.style.display = "inline";
+            
+            
+          var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
+            btn.appendChild(t);
+            document.getElementById("dairylist").appendChild(btn);   
+        }
+    }
+     var ref = database.ref('Meats');
+    ref.on('value', gotDataMeat);
+    function gotDataMeat(data) {
+      //  console.log(data.val());
+        var fridge = data.val();
+         var keys = Object.keys(fridge);
+        console.log(keys);
+        
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+             var name = fridge[k].name;
+            var amount = fridge[k].amount;
+            var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "red";
+            btn.style.display = "inline";
+            
+            
+           var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
+            btn.appendChild(t);
+            document.getElementById("meatlist").appendChild(btn);   
+        }
+    }
 
-    
-    function errData(err) {
-        console.log("Error!");
-        console.log(err);
-       
-        
-    }
     
     
     
@@ -325,8 +438,7 @@
       };
     </script>
     
-   
-    <!-- shelves of the fridge -->
+  
     
 
           <div class="row">
@@ -348,13 +460,8 @@
               <div id="newShelf7"></div>
     </div>
         
-        
-       
-
-    
 
         
-         <div class="fixPosition" class="panel-footer-fridge"><button id="removeButton">Get Recipes</button></div><div class="fixPosition" class="panel-footer-fridge"><button id="recipeButton">Remove</button></div>
 
     </main>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
