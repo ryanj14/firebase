@@ -10,15 +10,9 @@
     <!-- Easter egg for desktop -->
     <script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
     
-<!--    <script src="jquery-3.2.1.min.js"></script>-->
-    
     <!-- Style Sheet --> 
     <link rel="stylesheet" href="css/index.css">
     <link href="css/nav.css" rel="stylesheet" type="text/css">
-    
-	<!-- Custom Fonts -->
-<!--	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
-  
     
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,8 +22,6 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
    
     <!-- JQuery Slider -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,6 +76,29 @@
       };
       firebase.initializeApp(config);
     </script>
+    
+    <script>
+
+        
+        firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+          console.log(user.displayName);
+      var name = user.displayName;
+      var email = user.email;
+ 
+          user.getIdToken().then(function(accessToken) {
+                                 document.getElementById("account-details").textContent = JSON.stringify({
+              name,
+            email
+          });
+                                 });
+
+      } else {
+        // No user is signed in.
+      }
+    });
+    </script>
 
 </head>
 <body>
@@ -93,7 +108,9 @@
 </div>
     
     <nav id="menu" class="menu">
-        <header class="menu-header"></header>
+        <header class="menu-header">
+        <div id="account-details"></div>
+        </header>
         <section class="menu-section">
             <h3 class="menu-section-title">Navigation</h3>
             <ul class="menu-section-list">
@@ -107,6 +124,7 @@
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="affiliated.html">Affiliated Apps</a></li>
+                <li><a href="javascript:signOut();">Sign Out</a></li>
             </ul>
         </section>
     </nav>
@@ -200,6 +218,17 @@
 		})
 	//]]>
 </script> 
+            <script>
+        function signOut(){
+        firebase.auth().signOut().then(function() {
+          // Sign-out successful.
+            window.location.href = "index.html";
+            console.log('User signed out.');
+        }).catch(function(error) {
+          // An error happened.
+        });
+        }
+    </script>
 </body>
     <img id="egggif" src="../public/images/liam.jpg" alt="meme">
 </html>    

@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
-<!--    <script src="jquery-3.2.1.min.js"></script>-->
     
     <!--- Style Sheet --->
     <link rel="stylesheet" href="css/login.css">
     <link href="css/nav.css" rel="stylesheet" type="text/css">
-    
-	<!-- Custom Fonts -->
-<!--	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
     
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -23,7 +19,35 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--        <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    
+    <!--Firebase javascript -->
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+    
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.0.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.0.0/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'index.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+    <!-- End of Firebase code -->
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    
     
     <!-- jQuery slider -->
@@ -49,30 +73,7 @@
         }
     </style>
     
-    <script>
-        
-        var succ = 1;
-        
-        function blurr() {
-            
-            
-            
-           var x = document.getElementById('weo');
-            
-            if (succ == 1) {
-           x.style.webkitFilter="blur(2px)";
-                succ = 0;
-            } 
-            else if (succ == 0) {
-                x.style.webkitFilter="blur(0px)";
-                succ = 1;
-            }
-            
-            
-        }
-              
-    </script>
-    </head>
+</head>
 <body style="background-color:##72bcd4">
     
          <div id="preloader">
@@ -146,6 +147,7 @@
                 <input type="submit">
             </fieldset>
         </form>
+        <div id="firebaseui-auth-container"></div>
     </main>
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
