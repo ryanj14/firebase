@@ -59,7 +59,7 @@
     var ref = database.ref('Vegetables');
     ref.on('value', gotDataVeg);
     function gotDataVeg(data) {
-      //  console.log(data.val());
+    
         var fridge = data.val();
          var keys = Object.keys(fridge);
         console.log(keys);
@@ -71,15 +71,17 @@
             var amount = fridge[k].amount;
             var expiry = fridge[k].expiry;
             
-        //   console.log(amount, expiry);
-            var btn = document.createElement("BUTTON")
-            btn.style.color = "red";
-            btn.style.display = "inline";
+   
+            var li = document.createElement("li");
+            li.style.color = "white";
+            li.style.display = "block";
+            li.style.textAlign ="left";
+            
             
             
             var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
-            btn.appendChild(t);
-            document.getElementById("veggielist").appendChild(btn);   
+            li.appendChild(t);
+            document.getElementById("veggielist").appendChild(li);   
         }
     }
     
@@ -101,14 +103,14 @@
             var expiry = fridge[k].expiry;
             
         //   console.log(amount, expiry);
-            var btn = document.createElement("BUTTON")
-            btn.style.color = "red";
-            btn.style.display = "inline";
-            
+            var li = document.createElement("li")
+            li.style.color = "white";
+            li.style.display = "block";
+            li.style.textAlign = "left";
             
           var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
-            btn.appendChild(t);
-            document.getElementById("fruitlist").appendChild(btn);   
+            li.appendChild(t);
+            document.getElementById("fruitlist").appendChild(li);   
         }
     }
     
@@ -128,14 +130,14 @@
             var expiry = fridge[k].expiry;
             
         //   console.log(amount, expiry);
-            var btn = document.createElement("BUTTON")
-            btn.style.color = "red";
-            btn.style.display = "inline";
-            
+            var li = document.createElement("li")
+            li.style.color = "white";
+            li.style.display = "block";
+            li.style.textAlign = "left";
             
            var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
-            btn.appendChild(t);
-            document.getElementById("grainlist").appendChild(btn);   
+            li.appendChild(t);
+            document.getElementById("grainlist").appendChild(li);   
         }
     }
      var ref = database.ref('Dairy');
@@ -154,14 +156,14 @@
             var expiry = fridge[k].expiry;
             
         //   console.log(amount, expiry);
-            var btn = document.createElement("BUTTON")
-            btn.style.color = "red";
-            btn.style.display = "inline";
-            
+            var li = document.createElement("li")
+            li.style.color = "white";
+            li.style.display = "block";
+            li.style.textAlign = "left";
             
           var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
-            btn.appendChild(t);
-            document.getElementById("dairylist").appendChild(btn);   
+            li.appendChild(t);
+            document.getElementById("dairylist").appendChild(li);   
         }
     }
      var ref = database.ref('Meats');
@@ -180,14 +182,14 @@
             var expiry = fridge[k].expiry;
             
         //   console.log(amount, expiry);
-            var btn = document.createElement("BUTTON")
-            btn.style.color = "red";
-            btn.style.display = "inline";
-            
+            var li = document.createElement("li")
+            li.style.color = "white";
+            li.style.display = "block";
+            li.style.textAlign = "left";
             
            var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
-            btn.appendChild(t);
-            document.getElementById("meatlist").appendChild(btn);   
+            li.appendChild(t);
+            document.getElementById("meatlist").appendChild(li);   
         }
     }
 
@@ -290,7 +292,7 @@
         
 <div class="row">
     <div class="col-xs-2"></div>
-    <div class="col-xs-8 veggie-container">Veg
+    <div class="col-xs-8 veggie-container"><div class="text-container">Vegetables</div>
         <ul id="veggielist">
         
         </ul>
@@ -298,7 +300,7 @@
         </div>
         <div class="row">
     <div class="col-xs-2"></div>
-    <div class="col-xs-8 veggie-container">Fruits
+            <div class="col-xs-8 veggie-container"><div class="text-container">Fruits</div>
         <ul id="fruitlist">
         
         </ul>
@@ -306,7 +308,7 @@
         </div>
         <div class="row">
     <div class="col-xs-2"></div>
-    <div class="col-xs-8 veggie-container">Grains
+            <div class="col-xs-8 veggie-container"><div class="text-container">Grains</div>
         <ul id="grainlist">
         
         </ul>
@@ -314,7 +316,7 @@
         </div>
         <div class="row">
     <div class="col-xs-2"></div>
-    <div class="col-xs-8 veggie-container">Dairy
+            <div class="col-xs-8 veggie-container"><div class="text-container">Dairy</div>
         <ul id="dairylist">
         
         </ul>
@@ -322,7 +324,7 @@
         </div>
         <div class="row">
     <div class="col-xs-2"></div>
-    <div class="col-xs-8 veggie-container">Meats
+            <div class="col-xs-8 veggie-container"><div class="text-container">Meats</div>
         <ul id="meatlist">
         
         </ul>
