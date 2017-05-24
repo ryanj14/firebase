@@ -10,6 +10,7 @@
     <!--- Style Sheet --->
     <link href="css/nav.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/frideMain.css">
+    <link rel="stylesheet" href="css/fridge.css">
 	<!-- Custom Fonts -->
 	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
@@ -55,8 +56,10 @@
     database = firebase.database();
     
     var ref = database.ref('Fruits')
+  
     // var ref = database.ref('fridge');
     ref.on('value', gotData, errData);
+   
     
     function gotData(data) {
       //  console.log(data.val());
@@ -76,146 +79,151 @@
             
         //   console.log(amount, expiry);
         // makes new shelf after 4 items    
-        if (num > 3 && num < 5) {
-                
+        
+                if (i % 2 == 0) {
+            
                 var div = document.createElement("DIV")
-                div.style.borderBottom = "30px solid #A1A194";
-                div.style.borderLeft = "20px solid transparent";
-                div.style.borderRight = "20px solid transparent";
-                div.style.zIndex = "-1";
-                div.style.position = "relative";
-                div.style.top = "-15px";
+                div.style.height = "100px";
+                div.style.width = "100%";
+                div.style.padding = "0px !important";
+                div.style.backgroundColor = "#0e735d";
+                div.style.opacity = "0.9";
+                
+                document.getElementById("newShelf").appendChild(div); }
+            
+            else {
+                
+                  var div = document.createElement("DIV")
+                div.style.height = "100px";
+                div.style.width = "100%";
+                div.style.padding = "0px !important";
+                div.style.backgroundColor = "#434247";
+                div.style.opacity = "0.9";
                 
                 document.getElementById("newShelf").appendChild(div);
                 
-            } 
+            }
             
-             if (num >= 6 && num < 7) {
-                
-                var div = document.createElement("DIV")
-                div.style.borderBottom = "30px solid #A1A194";
-                div.style.borderLeft = "20px solid transparent";
-                div.style.borderRight = "20px solid transparent";
-                div.style.zIndex = "-1";
-                div.style.position = "relative";
-                div.style.top = "-15px";
-                
-                document.getElementById("newShelf2").appendChild(div);
-                
-            } 
-            
-                  if (num >= 9 && num < 10) {
-                
-                var div = document.createElement("DIV")
-                div.style.borderBottom = "30px solid #A1A194";
-                div.style.borderLeft = "20px solid transparent";
-                div.style.borderRight = "20px solid transparent";
-                div.style.zIndex = "-1";
-                div.style.position = "relative";
-                div.style.top = "-15px";
-                
-                document.getElementById("newShelf3").appendChild(div);
-                
-            }
-                      if (num >= 12 && num < 13) {
-                
-                var div = document.createElement("DIV")
-                div.style.borderBottom = "30px solid #A1A194";
-                div.style.borderLeft = "20px solid transparent";
-                div.style.borderRight = "20px solid transparent";
-                div.style.zIndex = "-1";
-                div.style.position = "relative";
-                div.style.top = "-15px";
-                
-                document.getElementById("newShelf4").appendChild(div);
-                
-            }
-                  if (num >= 15 && num < 16) {
-                
-                var div = document.createElement("DIV")
-                div.style.borderBottom = "30px solid #A1A194";
-                div.style.borderLeft = "20px solid transparent";
-                div.style.borderRight = "20px solid transparent";
-                div.style.zIndex = "-1";
-                div.style.position = "relative";
-                div.style.top = "-15px";
-                
-                document.getElementById("newShelf5").appendChild(div);
-                
-            }
-                  if (num >= 18 && num < 19) {
-                
-                var div = document.createElement("DIV")
-                div.style.borderBottom = "30px solid #A1A194";
-                div.style.borderLeft = "20px solid transparent";
-                div.style.borderRight = "20px solid transparent";
-                div.style.zIndex = "-1";
-                div.style.position = "relative";
-                div.style.top = "-15px";
-                
-                document.getElementById("newShelf6").appendChild(div);
-                
-            }
-                  if (num >= 21 && num < 22) {
-                
-                var div = document.createElement("DIV")
-                div.style.borderBottom = "30px solid #A1A194";
-                div.style.borderLeft = "20px solid transparent";
-                div.style.borderRight = "20px solid transparent";
-                div.style.zIndex = "-1";
-                div.style.position = "relative";
-                div.style.top = "-15px";
-                
-                document.getElementById("newShelf7").appendChild(div);
-                
-            }
-        
             var btn = document.createElement("BUTTON")
-            btn.style.color = "#0e735d";
-            btn.style.display = "inline";
+            btn.style.color = "black";
             btn.style.border = "0";
             btn.style.backgroundColor = "#eaeff2";
             btn.style.boxShadow = "none";
             btn.style.borderRadius = "3px";
-            btn.style.marginRight = "15px";
-            btn.style.marginLeft = "15px";
-          
+            btn.style.height = "40px";
+            btn.style.position = "relative";
+            btn.style.right = "30%";
+            btn.style.top = "15px";
+            btn.style.paddingLeft = "4px";
+            btn.style.paddingRight = "4px";
+            btn.style.width = "100px";
+            btn.style.fontSize = "30px;"
+            btn.style.fontWeight = "bold";
+            
             
             var t = document.createTextNode(name);
             btn.appendChild(t);
             
-            if (i < 3) 
-                
-            document.getElementById("fridgelist").appendChild(btn);   
+            var p = document.createElement("p");
+            p.style.color = "#eaeff2";
+            p.style.backgroundColor = "#A1A194";
             
-            if (i >= 3 && i < 6) 
-                
-                 document.getElementById("fridgelist1").appendChild(btn);
-                
-            if (i >= 6 && i < 9) 
-                
-                document.getElementById("fridgelist2").appendChild(btn);
             
-            if (i >= 9 && i < 12)
-                
-                document.getElementById("fridgelist3").appendChild(btn);
+            div.appendChild(btn);
             
-            if (i >= 12 && i < 15)
-                
-                document.getElementById("fridgelist4").appendChild(btn);
             
-            if (i >= 15 && i < 18)
-                
-                document.getElementById("fridgelist5").appendChild(btn);
             
-            if (i >= 18 && i < 21)
-                
-                document.getElementById("fridgelist6").appendChild(btn);
+     
+                       
             
-            if (i >= 21 && i < 24)
+            document.getElementById("newShelf").appendChild(div);
+            
+        
+            num++;
+            
+        }
+        
+          var ref1 = database.ref('Vegetables')
+           ref1.on('value', gotData1, errData1);
+        
+    }
+    
+    function gotData1(data1) {
+      //  console.log(data.val());
+        var Vegetables = data1.val();
+    //    var fridge = data.val();
+         var keys = Object.keys(Vegetables);
+      //   var keys = Object.keys(fridge);
+        console.log(keys);
+        var num = 0;
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+            
+            var name = Vegetables[k].name;
+        //    var amount = fridge[k].amount;
+        //    var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+        // makes new shelf after 4 items    
+        
+                if (i % 2 == 0) {
+            
+                var div = document.createElement("DIV")
+                div.style.height = "100px";
+                div.style.width = "100%";
+                div.style.padding = "0px !important";
+                div.style.backgroundColor = "#0e735d";
+                div.style.opacity = "0.9";
                 
-                document.getElementById("fridgelist7").appendChild(btn);
+                document.getElementById("newShelf1").appendChild(div); }
+            
+            else {
                 
+                  var div = document.createElement("DIV")
+                div.style.height = "100px";
+                div.style.width = "100%";
+                div.style.padding = "0px !important";
+                div.style.backgroundColor = "#434247";
+                div.style.opacity = "0.9";
+                
+                document.getElementById("newShelf1").appendChild(div);
+                
+            }
+            
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "black";
+            btn.style.border = "0";
+            btn.style.backgroundColor = "#eaeff2";
+            btn.style.boxShadow = "none";
+            btn.style.borderRadius = "3px";
+            btn.style.height = "40px";
+            btn.style.position = "relative";
+            btn.style.right = "30%";
+            btn.style.top = "15px";
+            btn.style.paddingLeft = "4px";
+            btn.style.paddingRight = "4px";
+            btn.style.width = "100px";
+            btn.style.fontSize = "30px;"
+            btn.style.fontWeight = "bold";
+            
+            
+            var t = document.createTextNode(name);
+            btn.appendChild(t);
+            
+            var p = document.createElement("p");
+            p.style.color = "#eaeff2";
+            p.style.backgroundColor = "#A1A194";
+            
+            
+            div.appendChild(btn);
+            
+            
+            
+     
+                       
+            
+            document.getElementById("newShelf1").appendChild(div);
             
         
             num++;
@@ -230,6 +238,13 @@
     function errData(err) {
         console.log("Error!");
         console.log(err);
+       
+        
+    }
+     
+    function errData1(err1) {
+        console.log("Error!");
+        console.log(err1);
        
         
     }
@@ -329,34 +344,57 @@
     <!-- shelves of the fridge -->
     
 
-          <div class="row">
-              <div><ul id="fridgelist"></ul></div>
-          <div class="col-xs-12 shelf hidden-md hidden-lg"></div> 
-             <div><ul id="fridgelist1"></ul></div>
-            <div id="newShelf"></div>
-              <div><ul id="fridgelist2"></ul></div>
-              <div id="newShelf2"></div> 
-               <div><ul id="fridgelist3"></ul></div>
-              <div id="newShelf3"></div> 
-              <div><ul id="fridgelist4"></ul></div>
-              <div id="newShelf4"></div>
-              <div><ul id="fridgelist5"></ul></div>
-              <div id="newShelf5"></div>
-              <div><ul id="fridgelist6"></ul></div>
-              <div id="newShelf6"></div>
-              <div><ul id="fridgelist7"></ul></div>
-              <div id="newShelf7"></div>
-    </div>
         
+              
+            
+            
+            <button class="accordion">
+        <div class="col-md-11 col-xs-10">FRUIT
+        </div>
+        <div class="col-md-1 col-xs-1 icon-move">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+    </button>
         
+       <div class="panel">
+           <div id="newShelf"></div>
+           
+        </div>
        
-
+ <button class="accordion">
+        <div class="col-md-11 col-xs-10">VEGETABLES
+        </div>
+        <div class="col-md-1 col-xs-1 icon-move">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+    </button>
+         <div class="panel">
+           <div id="newShelf1"></div>
+           
+        </div>
     
 
         
          <div class="fixPosition" class="panel-footer-fridge"><button id="removeButton">Get Recipes</button></div><div class="fixPosition" class="panel-footer-fridge"><button id="recipeButton">Remove</button></div>
 
     </main>
+    <script>
+    
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <!-- Preloader -->
