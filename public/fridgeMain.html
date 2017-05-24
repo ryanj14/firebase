@@ -54,10 +54,11 @@
   firebase.initializeApp(config);
     database = firebase.database();
     
-    var ref = database.ref('fridge');
-    ref.on('value', gotData, errData);
     
-    function gotData(data) {
+    
+    var ref = database.ref('Vegetables');
+    ref.on('value', gotDataVeg);
+    function gotDataVeg(data) {
       //  console.log(data.val());
         var fridge = data.val();
          var keys = Object.keys(fridge);
@@ -78,25 +79,118 @@
             
             var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
             btn.appendChild(t);
-            document.getElementById("fridgelist").appendChild(btn);   
-            
-            
-        
-            
-            
+            document.getElementById("veggielist").appendChild(btn);   
         }
-        
-        
     }
     
+    
+    
+     var ref = database.ref('Fruits');
+    ref.on('value', gotDataFruit);
+    function gotDataFruit(data) {
+      //  console.log(data.val());
+        var fridge = data.val();
+         var keys = Object.keys(fridge);
+        console.log(keys);
+        
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+            
+            var amount = fridge[k].amount;
+            var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "red";
+            btn.style.display = "inline";
+            
+            
+            var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
+            btn.appendChild(t);
+            document.getElementById("fruitlist").appendChild(btn);   
+        }
+    }
+    
+    var ref = database.ref('Grains');
+    ref.on('value', gotDataGrain);
+     function gotDataGrain(data) {
+      //  console.log(data.val());
+        var fridge = data.val();
+         var keys = Object.keys(fridge);
+        console.log(keys);
+        
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+            
+            var amount = fridge[k].amount;
+            var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "red";
+            btn.style.display = "inline";
+            
+            
+            var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
+            btn.appendChild(t);
+            document.getElementById("grainlist").appendChild(btn);   
+        }
+    }
+     var ref = database.ref('Dairy');
+    ref.on('value', gotDataDairy);
+    function gotDataDairy(data) {
+      //  console.log(data.val());
+        var fridge = data.val();
+         var keys = Object.keys(fridge);
+        console.log(keys);
+        
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+            
+            var amount = fridge[k].amount;
+            var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "red";
+            btn.style.display = "inline";
+            
+            
+            var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
+            btn.appendChild(t);
+            document.getElementById("dairylist").appendChild(btn);   
+        }
+    }
+     var ref = database.ref('Meats');
+    ref.on('value', gotDataMeat);
+    function gotDataMeat(data) {
+      //  console.log(data.val());
+        var fridge = data.val();
+         var keys = Object.keys(fridge);
+        console.log(keys);
+        
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+            
+            var amount = fridge[k].amount;
+            var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "red";
+            btn.style.display = "inline";
+            
+            
+            var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
+            btn.appendChild(t);
+            document.getElementById("meatlist").appendChild(btn);   
+        }
+    }
 
-    
-    function errData(err) {
-        console.log("Error!");
-        console.log(err);
-       
-        
-    }
     
     
     
@@ -189,19 +283,56 @@
       };
     </script>
     
-   
-    <!-- shelves of the fridge -->
+  
     
 
         
-        <ul id="fridgelist">
+        
+<div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8 veggie-container">Veg
+        <ul id="veggielist">
         
         </ul>
-
-    
+        </div>
+        </div>
+        <div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8 veggie-container">Fruits
+        <ul id="fruitlist">
+        
+        </ul>
+        </div>
+        </div>
+        <div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8 veggie-container">Grains
+        <ul id="grainlist">
+        
+        </ul>
+        </div>
+        </div>
+        <div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8 veggie-container">Dairy
+        <ul id="dairylist">
+        
+        </ul>
+        </div>
+        </div>
+        <div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8 veggie-container">Meats
+        <ul id="meatlist">
+        
+        </ul>
+        </div>
+        </div>
+        
+        
 
         
-         <div class="fixPosition" class="panel-footer-fridge"><button id="removeButton">Get Recipes</button></div><div class="fixPosition" class="panel-footer-fridge"><button id="recipeButton">Remove</button></div>
+        
 
     </main>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
