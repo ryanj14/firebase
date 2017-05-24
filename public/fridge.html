@@ -38,18 +38,73 @@
     console.log(firebase);
     
     var database = firebase.database();
-    var ref = database.ref('fridge');
+    var ref = database.ref('score');
     
     
-    function add() {
+    function addVeg() {
         
         var data = {
-            amount: document.getElementById('number').value,
-            expiry: document.getElementById('expiry').value
+            name: document.getElementById('name-veg').value,
+            amount: document.getElementById('number-veg').value,
+            expiry: document.getElementById('expiry-veg').value
             
         }
         console.log(firebase);
-        var ref = database.ref('fridge');
+        var ref = database.ref('Vegetables');
+        ref.push(data);
+    }
+    
+    function addFruit() {
+        
+        var data = {
+            name: document.getElementById('name-fruit').value,
+            amount: document.getElementById('number-fruit').value,
+            expiry: document.getElementById('expiry-fruit').value
+            
+        }
+        console.log(firebase);
+        var ref = database.ref('Fruits');
+        ref.push(data);
+    }
+    
+    function addDairy() {
+        
+        var data = {
+            name: document.getElementById('name-dairy').value,
+            amount: document.getElementById('number-dairy').value,
+            expiry: document.getElementById('expiry-dairy').value
+            
+        }
+        console.log(firebase);
+        var ref = database.ref('Dairy');
+        ref.push(data);
+    }
+    
+    function addMeat() {
+        
+        var data = {
+            name: document.getElementById('name-meat').value,
+            amount: document.getElementById('number-meat').value,
+            expiry: document.getElementById('expiry-meat').value
+            
+        }
+        console.log(firebase);
+        var ref = database.ref('Meats');
+        ref.push(data);
+    }
+    
+    
+    
+    function addGrain() {
+        
+        var data = {
+            name: document.getElementById('name-grain').value,
+            amount: document.getElementById('number-grain').value,
+            expiry: document.getElementById('expiry-grain').value
+            
+        }
+        console.log(firebase);
+        var ref = database.ref('Grains');
         ref.push(data);
     }
     
@@ -70,34 +125,8 @@
       .box { height: 1500px; }
     </style>
     
-    
-    <!-- Highlight or unhighlight food icons when clicked on -->    
-    <script>
-
-    function selected(){
-        var food = document.getElementsByClassName('click')
-
-        for(let i = 0; i < food.length; i++){
-            food[i].onclick=function(){
-
-                if (food[i].style.backgroundColor == "") {
-                food[i].style.backgroundColor="#b1d0ca"
-
-                }
-
-                 else {
-                food[i].style.backgroundColor=""
-
-            }
-
-            }
-        }
-    }
-
-    onload=selected
-
-
-    </script>
+   
+   
 </head>
 <body id="length">
     
@@ -157,8 +186,7 @@
         
         
         function clear(){
-           var form = document.getElementById('#submit');
-            form.reset;
+           document.getElementById("name").reset();
         }
     </script>
         
@@ -184,19 +212,19 @@
         
         <div class="row">
             <div class="col-xs-1"></div>
-            <div class="col-xs-6 item-name">
-            <input type="text">
+            <div class="col-xs-6 item-name" >
+            <input type="text" id="name-veg">
             </div>
         </div>
     <div class=" col-xs-9 input-holder">
             <label>Amount</label>
-        <input type="text" class="food-amount" id="number">
+        <input type="text" class="food-amount" id="number-veg">
             <label>Expiry</label>
-        <input type="text" class="food-expiry" id="expiry">
+        <input type="text" class="food-expiry" id="expiry-veg">
     </div>
         
         
-         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="add()" onclick="clear()" id="submit"></div>
+         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="addVeg()" onclick="clear()" id="submit"></div>
     
     </div>
    
@@ -216,18 +244,18 @@
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-6 item-name">
-            <input type="text">
+            <input type="text" id="name-fruit">
             </div>
         </div>
     <div class=" col-xs-9 input-holder">
             <label>Amount</label>
-        <input type="text" class="food-amount" id="number">
+        <input type="text" class="food-amount" id="number-fruit">
             <label>Expiry</label>
-        <input type="text" class="food-expiry" id="expiry">
+        <input type="text" class="food-expiry" id="expiry-fruit">
     </div>
         
         
-         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="add()" onclick="clear()" id="submit"></div>
+         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="addFruit()" onclick="clear()" id="submit"></div>
     
     </div>
    
@@ -252,18 +280,18 @@
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-6 item-name">
-            <input type="text">
+            <input type="text" id="name-grain">
             </div>
         </div>
     <div class=" col-xs-9 input-holder">
             <label>Amount</label>
-        <input type="text" class="food-amount" id="number">
+        <input type="text" class="food-amount" id="number-grain">
             <label>Expiry</label>
-        <input type="text" class="food-expiry" id="expiry">
+        <input type="text" class="food-expiry" id="expiry-grain">
     </div>
         
         
-         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="add()" onclick="clear()" id="submit"></div>
+         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="addGrain()" onclick="clear()" id="submit"></div>
     
     </div>
    
@@ -291,18 +319,18 @@
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-6 item-name">
-            <input type="text">
+            <input type="text" id="name-dairy">
             </div>
         </div>
     <div class=" col-xs-9 input-holder">
             <label>Amount</label>
-        <input type="text" class="food-amount" id="number">
+        <input type="text" class="food-amount" id="number-dairy">
             <label>Expiry</label>
-        <input type="text" class="food-expiry" id="expiry">
+        <input type="text" class="food-expiry" id="expiry-dairy">
     </div>
         
         
-         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="add()" onclick="clear()" id="submit"></div>
+         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="addDairy()" onclick="clear()" id="submit"></div>
     
     </div>
    
@@ -330,18 +358,18 @@
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-6 item-name">
-            <input type="text">
+            <input type="text" id="name-meat">
             </div>
         </div>
     <div class=" col-xs-9 input-holder">
             <label>Amount</label>
-        <input type="text" class="food-amount" id="number">
+        <input type="text" class="food-amount" id="number-meat">
             <label>Expiry</label>
-        <input type="text" class="food-expiry" id="expiry">
+        <input type="text" class="food-expiry" id="expiry-meat">
     </div>
         
         
-         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="add()" onclick="clear()" id="submit"></div>
+         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="addMeat()" onclick="clear()" id="submit"></div>
     
     </div>
    
