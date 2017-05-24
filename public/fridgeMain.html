@@ -54,30 +54,186 @@
   firebase.initializeApp(config);
     database = firebase.database();
     
-    
+
+    var ref = database.ref('Fruits')
+    // var ref = database.ref('fridge');
+    ref.on('value', gotData, errData);
+
     
     var ref = database.ref('Vegetables');
     ref.on('value', gotDataVeg);
     function gotDataVeg(data) {
+
     
         var fridge = data.val();
          var keys = Object.keys(fridge);
+
+      //  console.log(data.val());
+        var Fruits = data.val();
+    //    var fridge = data.val();
+         var keys = Object.keys(Fruits);
+      //   var keys = Object.keys(fridge);
+
         console.log(keys);
-        
+        var num = 0;
         for (var i = 0; i < keys.length; i++) {
             
             var k = keys[i];
+
+            
+            var name = Fruits[k].name;
+           var amount = fridge[k].amount;
+           var expiry = fridge[k].expiry;
+
             var name = fridge[k].name;
             var amount = fridge[k].amount;
             var expiry = fridge[k].expiry;
+
             
+
    
             var li = document.createElement("li");
             li.style.color = "white";
             li.style.display = "block";
             li.style.textAlign ="left";
             
+
+        //   console.log(amount, expiry);
+        // makes new shelf after 4 items    
+        if (num > 3 && num < 5) {
+                
+                var div = document.createElement("DIV")
+                div.style.borderBottom = "30px solid #A1A194";
+                div.style.borderLeft = "20px solid transparent";
+                div.style.borderRight = "20px solid transparent";
+                div.style.zIndex = "-1";
+                div.style.position = "relative";
+                div.style.top = "-15px";
+                
+                document.getElementById("newShelf").appendChild(div);
+                
+            } 
             
+             if (num >= 6 && num < 7) {
+                
+                var div = document.createElement("DIV")
+                div.style.borderBottom = "30px solid #A1A194";
+                div.style.borderLeft = "20px solid transparent";
+                div.style.borderRight = "20px solid transparent";
+                div.style.zIndex = "-1";
+                div.style.position = "relative";
+                div.style.top = "-15px";
+                
+                document.getElementById("newShelf2").appendChild(div);
+                
+            } 
+            
+                  if (num >= 9 && num < 10) {
+                
+                var div = document.createElement("DIV")
+                div.style.borderBottom = "30px solid #A1A194";
+                div.style.borderLeft = "20px solid transparent";
+                div.style.borderRight = "20px solid transparent";
+                div.style.zIndex = "-1";
+                div.style.position = "relative";
+                div.style.top = "-15px";
+                
+                document.getElementById("newShelf3").appendChild(div);
+                
+            }
+                      if (num >= 12 && num < 13) {
+                
+                var div = document.createElement("DIV")
+                div.style.borderBottom = "30px solid #A1A194";
+                div.style.borderLeft = "20px solid transparent";
+                div.style.borderRight = "20px solid transparent";
+                div.style.zIndex = "-1";
+                div.style.position = "relative";
+                div.style.top = "-15px";
+                
+                document.getElementById("newShelf4").appendChild(div);
+                
+            }
+                  if (num >= 15 && num < 16) {
+                
+                var div = document.createElement("DIV")
+                div.style.borderBottom = "30px solid #A1A194";
+                div.style.borderLeft = "20px solid transparent";
+                div.style.borderRight = "20px solid transparent";
+                div.style.zIndex = "-1";
+                div.style.position = "relative";
+                div.style.top = "-15px";
+                
+                document.getElementById("newShelf5").appendChild(div);
+                
+            }
+                  if (num >= 18 && num < 19) {
+                
+                var div = document.createElement("DIV")
+                div.style.borderBottom = "30px solid #A1A194";
+                div.style.borderLeft = "20px solid transparent";
+                div.style.borderRight = "20px solid transparent";
+                div.style.zIndex = "-1";
+                div.style.position = "relative";
+                div.style.top = "-15px";
+                
+                document.getElementById("newShelf6").appendChild(div);
+                
+            }
+                  if (num >= 21 && num < 22) {
+                
+                var div = document.createElement("DIV")
+                div.style.borderBottom = "30px solid #A1A194";
+                div.style.borderLeft = "20px solid transparent";
+                div.style.borderRight = "20px solid transparent";
+                div.style.zIndex = "-1";
+                div.style.position = "relative";
+                div.style.top = "-15px";
+                
+                document.getElementById("newShelf7").appendChild(div);
+                
+            }
+        
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "#0e735d";
+            btn.style.display = "inline";
+            btn.style.border = "0";
+            btn.style.backgroundColor = "#eaeff2";
+            btn.style.boxShadow = "none";
+            btn.style.borderRadius = "3px";
+            btn.style.marginRight = "15px";
+            btn.style.marginLeft = "15px";
+          
+            
+
+            var t = document.createTextNode(name);
+            btn.appendChild(t);
+            
+            if (i < 3) 
+                
+            document.getElementById("fridgelist").appendChild(btn);   
+            
+            if (i >= 3 && i < 6) 
+                
+                 document.getElementById("fridgelist1").appendChild(btn);
+                
+            if (i >= 6 && i < 9) 
+                
+                document.getElementById("fridgelist2").appendChild(btn);
+            
+            if (i >= 9 && i < 12)
+                
+                document.getElementById("fridgelist3").appendChild(btn);
+>>>>>>> 932b2fb429cf963f37b03538460027aa69a13290
+            
+            if (i >= 12 && i < 15)
+                
+                document.getElementById("fridgelist4").appendChild(btn);
+            
+            if (i >= 15 && i < 18)
+                
+                document.getElementById("fridgelist5").appendChild(btn);
+
             
             var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
             li.appendChild(t);
@@ -103,10 +259,29 @@
             var expiry = fridge[k].expiry;
             
         //   console.log(amount, expiry);
+
             var li = document.createElement("li")
             li.style.color = "white";
             li.style.display = "block";
             li.style.textAlign = "left";
+
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "red";
+            btn.style.display = "inline";
+
+            
+            if (i >= 18 && i < 21)
+                
+                document.getElementById("fridgelist6").appendChild(btn);
+            
+            if (i >= 21 && i < 24)
+                
+                document.getElementById("fridgelist7").appendChild(btn);
+                
+            
+        
+            num++;
+
             
           var t = document.createTextNode('Name: ' + name +  ' Amount: ' + amount + ' Expires in: ' + expiry + ' days' );
             li.appendChild(t);
@@ -330,10 +505,28 @@
         </ul>
         </div>
         </div>
-        
-        
+
+          <div class="row">
+              <div><ul id="fridgelist"></ul></div>
+          <div class="col-xs-12 shelf hidden-md hidden-lg"></div> 
+             <div><ul id="fridgelist1"></ul></div>
+            <div id="newShelf"></div>
+              <div><ul id="fridgelist2"></ul></div>
+              <div id="newShelf2"></div> 
+               <div><ul id="fridgelist3"></ul></div>
+              <div id="newShelf3"></div> 
+              <div><ul id="fridgelist4"></ul></div>
+              <div id="newShelf4"></div>
+              <div><ul id="fridgelist5"></ul></div>
+              <div id="newShelf5"></div>
+              <div><ul id="fridgelist6"></ul></div>
+              <div id="newShelf6"></div>
+              <div><ul id="fridgelist7"></ul></div>
+              <div id="newShelf7"></div>
+    </div>
 
         
+
         
 
     </main>

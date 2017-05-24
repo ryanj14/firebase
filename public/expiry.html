@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fridge Home</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <!--- Style Sheet --->
+    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/frideMain.css">
+    <link rel="stylesheet" href="css/fridge.css">
+	<!-- Custom Fonts -->
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- jQuery slider -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+      .slideout-menu { left: auto; }
+      .btn-hamburger { left: auto; right: 12px;}
+      .box { height: 1500px; }  
+        
+        
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBakaFIMGbUxPiCMYRqi6NKkeNgcJBJcZQ",
+    authDomain: "my-virtual-fridge-6ff0b.firebaseapp.com",
+    databaseURL: "https://my-virtual-fridge-6ff0b.firebaseio.com",
+    projectId: "my-virtual-fridge-6ff0b",
+    storageBucket: "my-virtual-fridge-6ff0b.appspot.com",
+    messagingSenderId: "520914821066"
+  };
+    
+  firebase.initializeApp(config);
+    database = firebase.database();
+    
+    var ref = database.ref('Fruits')
+  
+    // var ref = database.ref('fridge');
+    ref.on('value', gotData, errData);
+   
+    
+    function gotData(data) {
+      //  console.log(data.val());
+        var Fruits = data.val();
+    //    var fridge = data.val();
+         var keys = Object.keys(Fruits);
+      //   var keys = Object.keys(fridge);
+        console.log(keys);
+        var num = 0;
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+            
+            var name = Fruits[k].name;
+        //    var amount = fridge[k].amount;
+        //    var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+        // makes new shelf after 4 items    
+        
+                if (i % 2 == 0) {
+            
+                var div = document.createElement("DIV")
+                div.style.height = "100px";
+                div.style.width = "100%";
+                div.style.padding = "0px !important";
+                div.style.backgroundColor = "#0e735d";
+                div.style.opacity = "0.9";
+                
+                document.getElementById("newShelf").appendChild(div); }
+            
+            else {
+                
+                  var div = document.createElement("DIV")
+                div.style.height = "100px";
+                div.style.width = "100%";
+                div.style.padding = "0px !important";
+                div.style.backgroundColor = "#434247";
+                div.style.opacity = "0.9";
+                
+                document.getElementById("newShelf").appendChild(div);
+                
+            }
+            
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "black";
+            btn.style.border = "0";
+            btn.style.backgroundColor = "#eaeff2";
+            btn.style.boxShadow = "none";
+            btn.style.borderRadius = "3px";
+            btn.style.height = "40px";
+            btn.style.position = "relative";
+            btn.style.right = "30%";
+            btn.style.top = "15px";
+            btn.style.paddingLeft = "4px";
+            btn.style.paddingRight = "4px";
+            btn.style.width = "100px";
+            btn.style.fontSize = "30px;"
+            btn.style.fontWeight = "bold";
+            
+            
+            var t = document.createTextNode(name);
+            btn.appendChild(t);
+            
+            var p = document.createElement("p");
+            p.style.color = "#eaeff2";
+            p.style.backgroundColor = "#A1A194";
+            
+            
+            div.appendChild(btn);
+            
+            
+            
+     
+                       
+            
+            document.getElementById("newShelf").appendChild(div);
+            
+        
+            num++;
+            
+        }
+        
+          var ref1 = database.ref('Vegetables')
+           ref1.on('value', gotData1, errData1);
+        
+    }
+    
+    function gotData1(data1) {
+      //  console.log(data.val());
+        var Vegetables = data1.val();
+    //    var fridge = data.val();
+         var keys = Object.keys(Vegetables);
+      //   var keys = Object.keys(fridge);
+        console.log(keys);
+        var num = 0;
+        for (var i = 0; i < keys.length; i++) {
+            
+            var k = keys[i];
+            
+            var name = Vegetables[k].name;
+        //    var amount = fridge[k].amount;
+        //    var expiry = fridge[k].expiry;
+            
+        //   console.log(amount, expiry);
+        // makes new shelf after 4 items    
+        
+                if (i % 2 == 0) {
+            
+                var div = document.createElement("DIV")
+                div.style.height = "100px";
+                div.style.width = "100%";
+                div.style.padding = "0px !important";
+                div.style.backgroundColor = "#0e735d";
+                div.style.opacity = "0.9";
+                
+                document.getElementById("newShelf1").appendChild(div); }
+            
+            else {
+                
+                  var div = document.createElement("DIV")
+                div.style.height = "100px";
+                div.style.width = "100%";
+                div.style.padding = "0px !important";
+                div.style.backgroundColor = "#434247";
+                div.style.opacity = "0.9";
+                
+                document.getElementById("newShelf1").appendChild(div);
+                
+            }
+            
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "black";
+            btn.style.border = "0";
+            btn.style.backgroundColor = "#eaeff2";
+            btn.style.boxShadow = "none";
+            btn.style.borderRadius = "3px";
+            btn.style.height = "40px";
+            btn.style.position = "relative";
+            btn.style.right = "30%";
+            btn.style.top = "15px";
+            btn.style.paddingLeft = "4px";
+            btn.style.paddingRight = "4px";
+            btn.style.width = "100px";
+            btn.style.fontSize = "30px;"
+            btn.style.fontWeight = "bold";
+            
+            
+            var t = document.createTextNode(name);
+            btn.appendChild(t);
+            
+            var p = document.createElement("p");
+            p.style.color = "#eaeff2";
+            p.style.backgroundColor = "#A1A194";
+            
+            
+            div.appendChild(btn);
+            
+            
+            
+     
+                       
+            
+            document.getElementById("newShelf1").appendChild(div);
+            
+        
+            num++;
+            
+        }
+        
+        
+    }
+    
+
+    
+    function errData(err) {
+        console.log("Error!");
+        console.log(err);
+       
+        
+    }
+     
+    function errData1(err1) {
+        console.log("Error!");
+        console.log(err1);
+       
+        
+    }
+    
+    
+    
+    
+    </script>
+<!-- highlights the selected food icons so users can tell what they've selected -->
+    <script>
+
+    var count = 1;
+
+    function selected(){
+        var food = document.getElementsByClassName('click')
+
+        for(let i = 0; i < food.length; i++){
+            food[i].onclick=function(){
+
+                if (food[i].style.backgroundColor == "") {
+                food[i].style.backgroundColor="#b1d0ca"
+
+                }
+
+                 else {
+                food[i].style.backgroundColor=""
+
+            }
+
+            }
+        }
+    }
+
+    onload=selected
+
+    </script>
+
+</head>
+<body id="length">
+    
+     <div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
+    
+    <nav id="menu" class="menu">
+        <header class="menu-header"></header>
+        <section class="menu-section">
+            <h3 class="menu-section-title">Navigation</h3>
+            <ul class="menu-section-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fridgeMain.html">Fridge Contents</a></li>
+                <li><a href="fridge.html">Add Ingredients</a></li>
+                <li><a href="logIn.html">Sign In</a></li>
+                <li><a href="registermvp.html">Register</a></li>   
+                <li><a href="realRecipes.html">Recipes</a></li>
+                <li><a href="tips&tricks.html">Tips &amp; Tricks</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="affiliated.html">Affiliated Apps</a></li>
+            </ul>
+        </section>
+    </nav>  
+
+    <main id="panel" class="panel">
+      <header class="panel-header">
+          <div class="wedaBest col-md-12">
+              <div class="img-container col-xs-1 col-md-1">
+                  <a href="index.html"><div class="mvf">MV<div   class="mvf1">F</div></div></a>
+              </div>
+          </div>
+          <button class="btn-hamburger js-slideout-toggle">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+      </header>
+
+    <!-- jQuery slider function -->  
+    <script src="dist/slideout.js"></script>
+    <script>
+      window.onload = function() {
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'side': 'right'
+        });
+
+        document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+          slideout.toggle();
+        });
+
+        document.querySelector('.menu').addEventListener('click', function(eve) {
+          if (eve.target.nodeName === 'A') { slideout.close(); }
+        });
+      };
+    </script>
+    
+   
+    <!-- shelves of the fridge -->
+    
+
+        
+              
+            
+            
+            <button class="accordion">
+        <div class="col-md-11 col-xs-10">FRUIT
+        </div>
+        <div class="col-md-1 col-xs-1 icon-move">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+    </button>
+        
+       <div class="panel">
+           <div id="newShelf"></div>
+           
+        </div>
+       
+ <button class="accordion">
+        <div class="col-md-11 col-xs-10">VEGETABLES
+        </div>
+        <div class="col-md-1 col-xs-1 icon-move">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+    </button>
+         <div class="panel">
+           <div id="newShelf1"></div>
+           
+        </div>
+    
+
+        
+         <div class="fixPosition" class="panel-footer-fridge"><button id="removeButton">Get Recipes</button></div><div class="fixPosition" class="panel-footer-fridge"><button id="recipeButton">Remove</button></div>
+
+    </main>
+    <script>
+    
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- Preloader -->
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(350).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
+    </body>
+</html>
+    
