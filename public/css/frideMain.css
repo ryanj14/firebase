@@ -94,20 +94,13 @@ ul {
     margin: auto;
 }
 
-.veggie-container{
-    border:1px solid white;
-    min-height: 60px;
-    height:auto;
-    color:white;
-    font-size:20px;
-}
-
-
-#veggielist{
-    padding-top:10px;
-}
-
-.text-container{
-    font-size:30px;
-    margin-bottom:5px;
+.shelf {
+    
+    border-bottom: 30px solid #A1A194;
+    border-left:  = 20px solid transparent;
+    border-right: = 20px solid transparent;
+    z-index:-1;
+    position: relative;
+    top : -15px;
+    
 }
