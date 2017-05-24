@@ -35,7 +35,9 @@
     <style>
       .slideout-menu { left: auto; }
       .btn-hamburger { left: auto; right: 12px;}
-      .box { height: 1500px; }   
+      .box { height: 1500px; }  
+        
+        
     </style>
     <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 <script>
@@ -69,10 +71,14 @@
             var expiry = fridge[k].expiry;
             
         //   console.log(amount, expiry);
-            var li = document.createElement("LI")
+            var btn = document.createElement("BUTTON")
+            btn.style.color = "red";
+            btn.style.display = "inline";
+            
+            
             var t = document.createTextNode('Amount: ' + amount + ' Expires in: ' + expiry + ' days');
-            li.appendChild(t);
-            document.getElementById("fridgelist").appendChild(li);   
+            btn.appendChild(t);
+            document.getElementById("fridgelist").appendChild(btn);   
             
             
         
@@ -124,6 +130,7 @@
     onload=selected
 
     </script>
+
 </head>
 <body id="length">
     
@@ -187,9 +194,9 @@
     
 
         
-        <ol id="fridgelist">
+        <ul id="fridgelist">
         
-        </ol>
+        </ul>
 
     
 

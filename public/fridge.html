@@ -38,8 +38,19 @@
     console.log(firebase);
     
     var database = firebase.database();
+    var storage = firebase.storage();
+    
     var ref = database.ref('fridge');
     
+    var storageRef = firebase.storage().ref();
+    var breadRef = storageRef.child('images/bread.jpg');
+    
+    var file = fridge.html
+    ref.put(file).then(function(snapshot) {
+                       console.log('Uploaded a file');
+                       });
+    var pathReference = storage.ref('images/bread.jpg');
+    var gsReference = storage.refFromURL('gs://bucket/images/bread.jpg')
     
     function add() {
         
