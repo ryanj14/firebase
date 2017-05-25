@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PB &amp;J </title>
+    <title>PB &amp; J </title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
-    <script src="jquery-3.2.1.min.js"></script>
+
     <!--- Style Sheet --->
     <link rel="stylesheet" href="css/recipe.css">
     <link href="css/nav.css" rel="stylesheet" type="text/css">
-    
-	<!-- Custom Fonts -->
-	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
  
-     <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- jQuery library -->
@@ -22,7 +19,6 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="cleartype" content="on">
@@ -105,17 +101,18 @@
     </nav> 
     <!-- End of navigation -->     
     
-    <main id="panel" class="panel">
-      <header class="panel-header">
-          <div class="wedaBest col-md-12">
-              <div class="img-container col-xs-1 col-md-1">
-                  <a href="index.html"><div class="mvf">MV<div  class="mvf1">F</div></div></a>
-              </div>
+<main id="panel" class="panel">
+    
+    <header class="panel-header">
+        <div class="wedaBest col-md-12">
+          <div class="img-container col-xs-1 col-md-1">
+              <a href="index.html"><div class="mvf">MV<div  class="mvf1">F</div></div></a>
           </div>
-          <button class="btn-hamburger js-slideout-toggle" style="border-radius:10px">
-              <i class="fa fa-bars" aria-hidden="true"></i>
-          </button>
-      </header>
+        </div>
+        <button class="btn-hamburger js-slideout-toggle" style="border-radius:10px">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+    </header>
 
     <!-- The slideout jquery navigation bar code-->   
     <script src="dist/slideout.js"></script>
@@ -142,7 +139,7 @@
 <div class="container"> 
     
     <div class="row">
-    <div class="congrats">A developers secret recipe appeared!</div>
+        <div class="congrats">A developers secret recipe appeared!</div>
     </div>
     
     <div class="row">
@@ -186,7 +183,6 @@
                 </ol>
             </div>
         </div>
-        
     </div>
 </div>
 </main>
@@ -203,7 +199,9 @@
             })
         //]]>
     </script>
+    <!-- End of preloader code -->
     
+    <!-- Signout code -->
     <script>
         function signOut(){
         firebase.auth().signOut().then(function() {
@@ -215,6 +213,7 @@
         });
         }
     </script>
+    <!-- End of signout code -->
     
 </body>
 </html>

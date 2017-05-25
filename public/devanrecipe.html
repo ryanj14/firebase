@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
-    <script src="jquery-3.2.1.min.js"></script>
     
     <!--- Style Sheet --->
     <link rel="stylesheet" href="css/recipe.css">
     <link href="css/nav.css" rel="stylesheet" type="text/css">
-    
-	<!-- Custom Fonts -->
-	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
  
-     <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- jQuery library -->
@@ -23,7 +19,6 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="cleartype" content="on">
@@ -85,7 +80,7 @@
     
     <nav id="menu" class="menu">
         <header class="menu-header">
-        <div id="account-details"></div>
+            <div id="account-details"></div>
         </header>
         <section class="menu-section">
             <h3 class="menu-section-title">Navigation</h3>
@@ -118,8 +113,7 @@
           </button>
       </header>
 
-        <!-- The slideout jquery navigation bar code-->
-      
+    <!-- The slideout jquery navigation bar code--> 
     <script src="dist/slideout.js"></script>
     <script>
       window.onload = function() {
@@ -138,65 +132,64 @@
         });
       };
     </script>
-        
-         <!--End of jquery slider code -->
+    <!--End of jquery slider code -->
 
 <div class="container"> 
     
     <div class="row">
-    <div class="congrats">A developers secret recipe appeared!</div>
+        <div class="congrats">A developers secret recipe appeared!</div>
     </div>
+    
     <div class="row">
-     
         <div class="image-header img-fluid">
-            <img src="images/ceasarsalad.jpg" style="border-radius:10px;">
-           
+            <img src="images/ceasarsalad.jpg" style="border-radius:10px;">    
         </div>
     </div>
     
     <div class="col-md-12 recipe-header">Ceasar Salad</div>
     
-    
-    
     <div class="container container-border">
+        
         <div class="row">
             <div class="col-md-5"></div>
             <div class="col-md-2 ingredients-header"><h2>Ingredients</h2></div>
         </div>
         
         <div class="row">
-                <div class="col-md-12  ingredients-container">
-                    <ul>
-                        <li class="list-item">3 Romain hearts</li>
-                        <li class="list-item">2 cups croutons</li>
-                        <li class="list-item">Salt and Pepper, to taste</li>
-                        <li class="list-item">1 cup parmesan cheese</li>
-                        <li class="list-item">2 Tbsp Lemon juice</li>
-                        <li class="list-item">1 cup Ceasar Salad dressing</li>            
-                    </ul>
-                </div>
+            <div class="col-md-12  ingredients-container">
+                <ul>
+                    <li class="list-item">3 Romain hearts</li>
+                    <li class="list-item">2 cups croutons</li>
+                    <li class="list-item">Salt and Pepper, to taste</li>
+                    <li class="list-item">1 cup parmesan cheese</li>
+                    <li class="list-item">2 Tbsp Lemon juice</li>
+                    <li class="list-item">1 cup Ceasar Salad dressing</li>            
+                </ul>
+            </div>
         </div>
+        
          <div class="row">
             <div class="col-md-5"></div>
             <div class="col-md-2 directions-header"><h2>Directions</h2></div>
         </div>
         
         <div class="row">
-          
             <div class="col-md-12 direction-container">
-            <ol>
-                <li class="list-item">Thoroughly wash Romain lettuce in sink</li>
-                <li class="list-item">Break apart lettuce into small chuncks into a large bowl</li>
-                <li class="list-item">Add parmesan, ceasar dressing, lemon juice to lettuce and mix thoroughly.</li>
-                <li class="list-item">Add croutons, and serve!</li>      
-            </ol>
+                <ol>
+                    <li class="list-item">Thoroughly wash Romain lettuce in sink</li>
+                    <li class="list-item">Break apart lettuce into small chuncks into a large bowl</li>
+                    <li class="list-item">Add parmesan, ceasar dressing, lemon juice to lettuce and mix thoroughly.</li>
+                    <li class="list-item">Add croutons, and serve!</li>      
+                </ol>
             </div>
         </div>
     </div>
 </div>
-    </main> 
-       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</main> 
     
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+    <!-- Preloader code-->
     <script type="text/javascript">
         //<![CDATA[
         $(window).on('load', function() { // makes sure the whole site is loaded 
@@ -206,7 +199,9 @@
         })
         //]]>
     </script>
+    <!-- End of preloader code -->
     
+    <!-- Signout code -->
     <script>
         function signOut(){
         firebase.auth().signOut().then(function() {
@@ -218,6 +213,7 @@
         });
         }
     </script>
+    <!-- End of signout code -->
     
 </body>
 </html>
