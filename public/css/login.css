@@ -92,8 +92,8 @@ fieldset {
 
 form {
     
-    background-color: #EAEFF2;
-    
+    background-color: #434247;
+    color:white;
 }
 
 #alert { 
@@ -123,4 +123,8 @@ form {
     outline: none;
     border-color: #1481A0;
     box-shadow: 0 0 14px #1481A0;
+}
+
+ul.firebaseui-idp-list{
+    background-color:#434247;
 }

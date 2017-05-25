@@ -28,8 +28,9 @@
 }
 
 legend{
-    font-size:15px !important;
+    font-size:20px !important;
     text-align: center;
+    color:white !important;
 }
 
 input[type=submit] {
@@ -94,8 +95,8 @@ fieldset {
 
 form {
     
-    background-color: #EAEFF2;
-    
+    background-color: #434247;
+    color:white;
 }
 
 #alert { 
