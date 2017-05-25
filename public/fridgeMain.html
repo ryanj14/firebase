@@ -10,6 +10,9 @@
     <!--- Style Sheet --->
     <link href="css/nav.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/frideMain.css">
+
+	<!-- Custom Fonts -->
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -53,6 +56,8 @@
 
     var ref = database.ref('Fridge/Vegetables');
     ref.on('value', gotDataVeg);
+       
+    
     function gotDataVeg(data) {
         
 
@@ -191,7 +196,8 @@
             btn.style.marginRight = "15px";
             btn.style.marginLeft = "15px";
           
-            
+  
+
 
             var t = document.createTextNode(name);
             btn.appendChild(t);
@@ -235,6 +241,9 @@
     }
     
     
+    
+    
+    
     </script>
 <!-- highlights the selected food icons so users can tell what they've selected -->
     <script>
@@ -263,6 +272,8 @@
 
     onload=selected
 
+
+    
     </script>
     
     <script>       
@@ -350,7 +361,7 @@
     </script>
 
           <div class="row">
-              <div><ul id="fridgelist"></ul></div>
+              <div><ul id="fridgelist" id="buttons" class="buttons"></ul></div>
           <div class="col-xs-12 shelf hidden-md hidden-lg"></div> 
              <div><ul id="fridgelist1"></ul></div>
             <div id="newShelf"></div>
@@ -369,7 +380,7 @@
     </div>
 
         
-
+<div class="fixPosition" class="panel-footer-fridge"><button id="removeButton">Get Recipes</button></div><div class="fixPosition" class="panel-footer-fridge"><button id="recipeButton">Remove</button></div>
         
 
     </main>
