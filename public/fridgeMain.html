@@ -269,6 +269,27 @@
     onload=selected
 
     </script>
+    
+    <script>       
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+          console.log(user.displayName);
+      var name = user.displayName;
+      var email = user.email;
+ 
+          user.getIdToken().then(function(accessToken) {
+                                 document.getElementById("account-details").textContent = JSON.stringify({
+              name,
+            email
+          });
+                                 });
+
+      } else {
+        // No user is signed in.
+      }
+    });
+    </script>
 
 </head>
 <body id="length">

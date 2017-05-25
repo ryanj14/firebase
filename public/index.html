@@ -47,22 +47,6 @@
         }).listen();
     </script>
     
-    <script>
-        var succ = 1;
-        function blurr() {    
-           var x = document.getElementById('weo');
-            
-            if (succ == 1) {
-           x.style.webkitFilter="blur(2px)";
-                succ = 0;
-            } 
-            else if (succ == 0) {
-                x.style.webkitFilter="blur(0px)";
-                succ = 1;
-            }        
-        }  
-    </script>
-    
     <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -77,10 +61,8 @@
       firebase.initializeApp(config);
     </script>
     
-    <script>
-
-        
-        firebase.auth().onAuthStateChanged(function(user) {
+    <script>       
+    firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         // User is signed in.
           console.log(user.displayName);
@@ -208,17 +190,18 @@
    </main>   
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-<!-- Preloader -->
-<script type="text/javascript">
-	//<![CDATA[
-		$(window).on('load', function() { // makes sure the whole site is loaded 
-			$('#status').fadeOut(); // will first fade out the loading animation 
-            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-            $('body').delay(350).css({'overflow':'visible'});
-		})
-	//]]>
-</script> 
-            <script>
+    <!-- Preloader -->
+    <script type="text/javascript">
+        //<![CDATA[
+            $(window).on('load', function() { // makes sure the whole site is loaded 
+                $('#status').fadeOut(); // will first fade out the loading animation 
+                $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+                $('body').delay(350).css({'overflow':'visible'});
+            })
+        //]]>
+    </script>
+    
+    <script>
         function signOut(){
         firebase.auth().signOut().then(function() {
           // Sign-out successful.

@@ -7,6 +7,7 @@
     
     <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
     <script src="jquery-3.2.1.min.js"></script>
+    
     <!--- Style Sheet --->
     <link rel="stylesheet" href="css/recipe.css">
     <link href="css/nav.css" rel="stylesheet" type="text/css">
@@ -24,7 +25,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="cleartype" content="on">
     <meta name="MobileOptimized" content="320">
@@ -33,11 +33,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="test.css">
     <link rel="stylesheet" href="index.css">
+    
     <style>
       .slideout-menu { left: auto; }
       .btn-hamburger { left: auto; right: 12px; top: 0;}
       .box { height: 1500px; }
     </style>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBakaFIMGbUxPiCMYRqi6NKkeNgcJBJcZQ",
+        authDomain: "my-virtual-fridge-6ff0b.firebaseapp.com",
+        databaseURL: "https://my-virtual-fridge-6ff0b.firebaseio.com",
+        projectId: "my-virtual-fridge-6ff0b",
+        storageBucket: "my-virtual-fridge-6ff0b.appspot.com",
+        messagingSenderId: "520914821066"
+      };
+      firebase.initializeApp(config);
+    </script>
+    
+    <script>       
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+          console.log(user.displayName);
+      var name = user.displayName;
+      var email = user.email;
+ 
+          user.getIdToken().then(function(accessToken) {
+                                 document.getElementById("account-details").textContent = JSON.stringify({
+              name,
+            email
+          });
+                                 });
+
+      } else {
+        // No user is signed in.
+      }
+    });
+    </script>
+    
 </head>
 <body>
     
