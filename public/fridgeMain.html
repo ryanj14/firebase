@@ -64,6 +64,8 @@
 
     var ref = database.ref('Fridge/Vegetables');
     ref.on('value', gotDataVeg);
+       
+    
     function gotDataVeg(data) {
         
 
@@ -203,7 +205,8 @@
             btn.style.marginRight = "15px";
             btn.style.marginLeft = "15px";
           
-            
+  
+
 
             var t = document.createTextNode(name);
             btn.appendChild(t);
@@ -275,6 +278,8 @@
 
     onload=selected
 
+
+    
     </script>
 
 </head>
@@ -336,7 +341,7 @@
     </script>
 
           <div class="row">
-              <div><ul id="fridgelist"></ul></div>
+              <div><ul id="fridgelist" id="buttons" class="buttons"></ul></div>
           <div class="col-xs-12 shelf hidden-md hidden-lg"></div> 
              <div><ul id="fridgelist1"></ul></div>
             <div id="newShelf"></div>
@@ -355,7 +360,7 @@
     </div>
 
         
-
+<button onclick="remove()">Remove</button>
         
 
     </main>
