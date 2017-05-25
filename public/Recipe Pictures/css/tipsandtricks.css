@@ -1,0 +1,192 @@
+/* Tips and trick CSS */
+
+body {
+    background-color: #4CBA85 !important;
+}
+
+.title-container {
+    text-align: center;
+    font-size:30px;
+    height: 90px !important;
+    background-color: #434247;
+    color: white;
+    font-weight: bold;
+    padding-top: 30px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+
+.article-bg-fridge{
+    
+    background-image: url(../images/fridge.jpg);
+    height: 100px;
+    margin-bottom: 5px;
+
+    
+}
+
+.article-bg-bread{
+    
+    background-image: url(../images/bread.jpg);
+    height: 100px;
+    margin-bottom: 5px;
+    
+}
+
+.article-bg-rice{
+    
+    background-image: url(../images/rice.jpg);
+    height: 100px;
+    margin-bottom: 5px;
+    
+}
+
+.article-bg-banana{
+    
+    background-image: url(../images/banana.jpg);
+    height: 100px;
+    margin-bottom: 5px;
+    
+}
+
+.article-bg-eggs{
+    
+    background-image: url(../images/eggs.jpg);
+    height: 100px;
+    margin-bottom: 5px;
+    
+}
+
+.article-bg-cereal{
+    
+    background-image: url(../images/cereal.jpg);
+    height: 100px;
+    margin-bottom: 5px;
+    
+}
+
+.article-bg-meat{
+    
+    background-image: url(../images/meat.jpg);
+    height: 100px;
+    margin-bottom: 5px;
+    
+}
+
+.article-bg-fruit{
+    
+    background-image: url(../images/fruit.jpg);
+    height: 100px;
+    margin-bottom: 5px;
+    
+}
+
+.article-bg-cheese{
+    
+    background-image: url(../images/cheese.jpg);
+    height: 100px;
+    margin-bottom: 5px;
+    
+}
+
+.article {
+    
+    background-color: #0E735D;
+    opacity: 0.9;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    height: 50px;
+    text-align: left;
+    padding-top:20px;
+    
+}
+
+
+
+#demo {height:auto;
+    background-color: #A1A194;
+        border-radius: 10px;
+
+}
+
+#demo1 {height:auto;
+    background-color: #A1A194;
+    border-radius: 10px;
+}
+
+#demo2 {height:auto;
+    background-color: #A1A194;
+        border-radius: 10px;
+
+}
+
+#demo3 {height:auto;
+    background-color: #A1A194;
+        border-radius: 10px;
+
+}
+
+#demo4 {height:auto;
+    background-color: #A1A194;
+        border-radius: 10px;
+
+}
+
+#demo5 {height:auto;
+    background-color: #A1A194;
+        border-radius: 10px;
+
+}
+
+#demo6 {height:auto;
+    background-color: #A1A194;
+        border-radius: 10px;
+
+}
+
+#demo7 {height:auto;
+    background-color: #A1A194;
+        border-radius: 10px;
+
+}
+
+#demo8 {height:auto;
+    background-color: #A1A194;
+        border-radius: 10px;
+
+}
+
+.collapse.in {
+  display: block!important;
+    background-color: #A1A194;
+        border-radius: 10px;
+}
+
+.header-border{}
+.content-text{text-align:left;
+font-size:20px;
+font-family:sans-serif,"Verdana"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

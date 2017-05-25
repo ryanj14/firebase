@@ -1,0 +1,122 @@
+@import url(https://fonts.google.com/?selection.family=Muli);
+    
+body {       
+font-family: 'Muli', sans-serif;    
+}
+
+ #egggif {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 25%;
+    top: 15%;
+    width: 60%; /* Full width */
+    height: 80%; /* Full height */
+}
+
+#egggif img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.title-container{
+    margin-top: 20px; 
+    margin-bottom:20px;
+    padding:0px !important;
+}
+
+.pic-container{ 
+    background-repeat: no-repeat;
+    height:125px;  
+    background-image: url(../images/grayscale_image.png); 
+    background-size: cover;
+    padding: 0px !important;
+}
+
+.pic-container1 { 
+    background-color:forestgreen;
+    background-repeat: no-repeat;
+    height:125px;   
+    background-image: url(../images/celery1.jpg);
+    background-size: cover;
+    padding:0px !important;
+}
+
+.pic-container2 { 
+    background-repeat: no-repeat;
+    height:125px;
+    background-image: url(../images/smoothie.jpg);
+    background-size:cover;
+    padding:0px !important;
+}
+
+.pic-container3 { 
+    background-repeat: no-repeat;
+    height:125px;
+    background-image: url(../images/recipe.jpg);
+    background-size:cover;
+    padding:0px !important;
+}
+
+.para-container {
+    padding-top:20px;
+    color:black;
+    font-style: none;
+    font-size: 20px;
+    margin-top:50px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.para-container p {
+    margin-top: 15px;   
+}
+
+.about {  
+    background-color: #0E735D;
+    opacity: 0.9;
+    font-family: 'Muli', 'sans-serif';
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    height: 50px; 
+    text-align: left;
+}
+
+.contact {    
+    font-family: 'Muli',  'sans-serif';
+    background-color: #0E735D;
+    opacity: 0.9;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    height: 50px;
+    text-align: left;
+}
+
+.tips {
+    font-family: 'Muli',  'sans-serif';
+    background-color: #0E735D;
+    opacity: 0.9;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    height: 50px;
+    text-align: left;
+}
+
+.icon {
+    font-size: 30px;
+    color:white;
+}
+
+.virtual-char{
+    font-size: 40px;
+    color: #eaeff2;
+    background-color: #434247;
+    font-weight: bold;
+    height: 90px !important;
+    padding-top:30px;
+    font-family: 'Muli', sans-serif;
+}

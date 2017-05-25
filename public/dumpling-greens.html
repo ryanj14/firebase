@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chicken Dumpling Soup with Greens</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <!--- Style Sheet --->
+    <link rel="stylesheet" href="css/recipe.css">
+    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    
+	<!-- Custom Fonts -->
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+      .slideout-menu { left: auto; }
+      .btn-hamburger { left: auto; right: 12px; top: 0;}
+      .box { height: 1500px; }
+    </style>
+    </head>
+<body>
+    
+    <!-- The nav bar that interacts with the jquery slider -->
+     <nav id="menu" class="menu">
+      <a href="mobileindex.html">
+        <header class="menu-header">
+          <span class="menu-header-title">'Username'</span>
+        </header>
+      </a>
+      
+
+     <section class="menu-section">
+        <h3 class="menu-section-title">Navigation</h3>
+        <ul class="menu-section-list">
+          <li><a href="logIn.html">Sign in</a></li>
+            <li><a href="register.html">Register</a></li>
+          <li><a href="fridgeMain.html">Fridge Contents</a></li>
+          <li><a href="fridge.html">Add Ingredients</a></li>
+          <li><a href="realRecipes.html">Recipes</a></li>
+          <li><a href="tips&tricks.html">Tips &amp; Tricks</a></li>
+          <li><a href="aboutus.html">About us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="affiliated.html">Affiliated Apps</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+      </section>
+    </nav>
+
+<!-- End of navigation -->    
+    
+    <main id="panel" class="panel">
+      <header class="panel-header">
+          <div class="wedaBest col-md-12">
+              <div class="img-container col-xs-1 col-md-1">
+                 <a href="mobileindex.html"><div class="mvf">MV<div class="mvf1">F</div></div></a>
+              </div>
+          </div>
+          <button class="btn-hamburger js-slideout-toggle" style="border-radius:10px">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+      </header>
+
+        <!-- The slideout jquery navigation bar code-->
+      
+    <script src="dist/slideout.js"></script>
+    <script>
+      window.onload = function() {
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'side': 'right'
+        });
+
+        document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+          slideout.toggle();
+        });
+
+        document.querySelector('.menu').addEventListener('click', function(eve) {
+          if (eve.target.nodeName === 'A') { slideout.close(); }
+        });
+      };
+    </script>
+        
+         <!--End of jquery slider code -->
+
+<div class="container"> 
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="image-header img-fluid">
+            <img src="images/lasagna.jpg">
+           
+        </div>
+    </div>
+    
+    <div class="col-md-12 recipe-header">Chicken Dumpling Soup with Greens</div>
+    
+    
+    
+    <div class="container container-border">
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-2 ingredients-header"><h2>Ingredients</h2></div>
+        </div>
+        
+        <div class="row">
+            
+    
+                <div class="col-md-12  ingredients-container">
+                    <ul>
+                        <li class="list-item">6 cups chicken broth</li>
+                         <li class="list-item">	1 stalk lemongrass, (bulb and tough outer leaves removed), sliced and chopped</li>
+                         <li class="list-item">	3 to 5 fresh shiitake mushrooms, sliced thinly</li>
+                         <li class="list-item">	1 tablespoon soy sauce</li>
+                         <li class="list-item">	1/2 cup cooked boneless chicken (leftover roast chicken or turkey works well)</li>
+                         <li class="list-item">	1 thumb-size piece ginger, grated</li>
+                         <li class="list-item">	1 thumb-size piece ginger, grated</li>
+                         <li class="list-item">	2 spring onions, sliced</li>
+                         <li class="list-item">	2 teaspoons oyster sauce</li>
+                         <li class="list-item">	1 tablespoon fish sauce</li>
+                         <li class="list-item">	optional: 1 red chili, sliced and de-seeded</li>
+                         <li class="list-item">	1/2 small cucumber, sliced into matchstick-like pieces</li> 
+                        <li class="list-item">	1 tablespoon lime juice</li>
+                         <li class="list-item">	1 package wonton wrappers</li> 
+                        <li class="list-item">	garnish: handful of coriander and spring onion</li>  
+                    </ul>
+                </div>
+            
+        </div>
+         <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-2 directions-header"><h2>Directions</h2></div>
+        </div>
+        
+        <div class="row">
+          
+            <div class="col-md-12 direction-container">
+            <ol>
+                <li class="list-item">	First prepare the dumplings. To make the filling, place chicken, ginger, spring onions, fish sauce, and oyster sauce in a food processor. Process well.</li>
+                 <li class="list-item">	On a clean, dry working surface, spread out 6 wonton wrappers. Pour a little water into a bowl for dipping your fingers in, or a brush works well.</li>
+                 <li class="list-item">	Place 1 teaspoon of filling in the middle of each wrapper. Using your fingers or a brush, wet the outer edges of the first wrapper to make it stick. For simple dumplings: Simply fold one corner up (over the filling) to meet the opposite corner - this will give you a triangular dumpling.</li>
+                 <li class="list-item">	For more traditional-looking dumplings: bring all 4 corners up (over the filling) and press to stick together. Then pull up the sides, twisting slightly to seal. Whichever way you wrap, make sure the dumpling is sealed well with water.</li>
+                 <li class="list-item">	Place chicken broth in a soup pot over medium to high heat. Add lemongrass, soy sauce, and mushrooms. Bring to a boil, then reduce to a simmer for 5 minutes.</li>
+                 <li class="list-item">	Add dumplings to the chicken broth, plus the chili (if using). Boil for 5 minutes, or until dumplings are floating rather than sinking.</li>
+                 <li class="list-item">	Reduce the heat to low and add the cucumbers and lime juice. Taste test the soup for saltiness, adding up to 2 tablespoons fish sauce (instead of salt) as needed.</li>
+                 <li class="list-item">	To serve, ladle soup into bowls. Add a sprinkling of fresh coriander and fresh basil. Serve with more fresh-cut red chili or chili sauce on the side, if desired, and enjoy!</li>
+                 <li class="list-item"></li>
+                 <li class="list-item"></li>
+                 <li class="list-item"></li>    
+            </ol>
+            </div>
+        
+        </div>
+    </div>
+</div>
+    </main>    
+    </body>
+</html>
