@@ -15,13 +15,13 @@
 	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
      <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
     <!-- jQuery slider -->
@@ -183,6 +183,7 @@
             var k = keys[i];
             
             var name = Vegetables[k].name;
+             var expiry = Vegetables[k].expiry;
         //    var amount = fridge[k].amount;
         //    var expiry = fridge[k].expiry;
             
@@ -192,7 +193,7 @@
                 if (i % 2 == 0) {
             
                 var div = document.createElement("DIV")
-                div.style.height = "100px";
+                div.style.height = "130px";
                 div.style.width = "100%";
                 div.style.padding = "0px !important";
                 div.style.backgroundColor = "#A1A194";
@@ -203,7 +204,7 @@
             else {
                 
                   var div = document.createElement("DIV")
-                div.style.height = "100px";
+                div.style.height = "130px";
                 div.style.width = "100%";
                 div.style.padding = "0px !important";
                 div.style.backgroundColor = "#434247";
@@ -213,7 +214,9 @@
                 
             }
             
-            var btn = document.createElement("BUTTON")
+      
+            
+              var btn = document.createElement("BUTTON")
             btn.style.color = "black";
             btn.style.border = "0";
             btn.style.backgroundColor = "#eaeff2";
@@ -221,8 +224,8 @@
             btn.style.borderRadius = "3px";
             btn.style.height = "40px";
             btn.style.position = "relative";
-            btn.style.right = "30%";
-            btn.style.top = "15px";
+            btn.style.right = "45px";
+            btn.style.top = "5px";
             btn.style.paddingLeft = "4px";
             btn.style.paddingRight = "4px";
             btn.style.width = "100px";
@@ -233,14 +236,40 @@
             var t = document.createTextNode(name);
             btn.appendChild(t);
             
-            var p = document.createElement("p");
-            p.style.color = "#eaeff2";
-            p.style.backgroundColor = "#A1A194";
+             div.appendChild(btn);
+            
+             var btn = document.createElement("BUTTON")
+            btn.style.color = "black";
+            btn.style.border = "0";
+            btn.style.backgroundColor = "#eaeff2";
+            btn.style.boxShadow = "none";
+            btn.style.borderRadius = "3px";
+            btn.style.height = "42px";
+            btn.style.position = "relative";
+            btn.style.right = "145px";
+            btn.style.top = "72px";
+            btn.style.paddingLeft = "4px";
+            btn.style.paddingRight = "4px";
+            btn.style.width = "120px";
+            btn.style.fontWeight = "bold";
+            
+            var expiry = document.createTextNode('Expires in: ' + expiry + ' days');
+            btn.appendChild(expiry);
             
             
             div.appendChild(btn);
             
             
+            var progress = document.createElement("PROGRESS")
+            progress.max = "1";
+            progress.value = "1";
+            progress.style.webkitAppearence = "none";
+            progress.style.background = "orangered";
+            progress.style.position = "relative";
+            progress.style.top = "50px";
+            progress.style.left = "70px";
+            
+            div.appendChild(progress);
             
      
                        
@@ -273,6 +302,7 @@
             var k = keys[i];
             
             var name = Grains[k].name;
+            var expiry = Grains[k].expiry;
         //    var amount = fridge[k].amount;
         //    var expiry = fridge[k].expiry;
             
@@ -282,18 +312,18 @@
                 if (i % 2 == 0) {
             
                 var div = document.createElement("DIV")
-                div.style.height = "100px";
+                div.style.height = "130px";
                 div.style.width = "100%";
                 div.style.padding = "0px !important";
                 div.style.backgroundColor = "#A1A194";
-                div.style.opacity = "0.9"; 
+                div.style.opacity = "0.9";
                 
                 document.getElementById("newShelf2").appendChild(div); }
             
             else {
                 
                   var div = document.createElement("DIV")
-                div.style.height = "100px";
+                div.style.height = "130px";
                 div.style.width = "100%";
                 div.style.padding = "0px !important";
                 div.style.backgroundColor = "#434247";
@@ -303,7 +333,8 @@
                 
             }
             
-            var btn = document.createElement("BUTTON")
+      
+              var btn = document.createElement("BUTTON")
             btn.style.color = "black";
             btn.style.border = "0";
             btn.style.backgroundColor = "#eaeff2";
@@ -311,8 +342,8 @@
             btn.style.borderRadius = "3px";
             btn.style.height = "40px";
             btn.style.position = "relative";
-            btn.style.right = "30%";
-            btn.style.top = "15px";
+            btn.style.right = "45px";
+            btn.style.top = "5px";
             btn.style.paddingLeft = "4px";
             btn.style.paddingRight = "4px";
             btn.style.width = "100px";
@@ -323,14 +354,40 @@
             var t = document.createTextNode(name);
             btn.appendChild(t);
             
-            var p = document.createElement("p");
-            p.style.color = "#eaeff2";
-            p.style.backgroundColor = "#A1A194";
+             div.appendChild(btn);
+            
+             var btn = document.createElement("BUTTON")
+            btn.style.color = "black";
+            btn.style.border = "0";
+            btn.style.backgroundColor = "#eaeff2";
+            btn.style.boxShadow = "none";
+            btn.style.borderRadius = "3px";
+            btn.style.height = "42px";
+            btn.style.position = "relative";
+            btn.style.right = "145px";
+            btn.style.top = "72px";
+            btn.style.paddingLeft = "4px";
+            btn.style.paddingRight = "4px";
+            btn.style.width = "120px";
+            btn.style.fontWeight = "bold";
+            
+            var expiry = document.createTextNode('Expires in: ' + expiry + ' days');
+            btn.appendChild(expiry);
             
             
             div.appendChild(btn);
             
             
+            var progress = document.createElement("PROGRESS")
+            progress.max = "1";
+            progress.value = "1";
+            progress.style.webkitAppearence = "none";
+            progress.style.background = "orangered";
+            progress.style.position = "relative";
+            progress.style.top = "50px";
+            progress.style.left = "70px";
+            
+            div.appendChild(progress);
             
      
                        
@@ -362,6 +419,7 @@
             var k = keys[i];
             
             var name = Dairy[k].name;
+            var expiry = Dairy[k].expiry;
         //    var amount = fridge[k].amount;
         //    var expiry = fridge[k].expiry;
             
@@ -371,7 +429,7 @@
                 if (i % 2 == 0) {
             
                 var div = document.createElement("DIV")
-                div.style.height = "100px";
+                div.style.height = "130px";
                 div.style.width = "100%";
                 div.style.padding = "0px !important";
                 div.style.backgroundColor = "#A1A194";
@@ -382,7 +440,7 @@
             else {
                 
                   var div = document.createElement("DIV")
-                div.style.height = "100px";
+                div.style.height = "130px";
                 div.style.width = "100%";
                 div.style.padding = "0px !important";
                 div.style.backgroundColor = "#434247";
@@ -392,7 +450,7 @@
                 
             }
             
-            var btn = document.createElement("BUTTON")
+              var btn = document.createElement("BUTTON")
             btn.style.color = "black";
             btn.style.border = "0";
             btn.style.backgroundColor = "#eaeff2";
@@ -400,8 +458,8 @@
             btn.style.borderRadius = "3px";
             btn.style.height = "40px";
             btn.style.position = "relative";
-            btn.style.right = "30%";
-            btn.style.top = "15px";
+            btn.style.right = "45px";
+            btn.style.top = "5px";
             btn.style.paddingLeft = "4px";
             btn.style.paddingRight = "4px";
             btn.style.width = "100px";
@@ -412,12 +470,40 @@
             var t = document.createTextNode(name);
             btn.appendChild(t);
             
-            var p = document.createElement("p");
-            p.style.color = "#eaeff2";
-            p.style.backgroundColor = "#A1A194";
+             div.appendChild(btn);
+            
+             var btn = document.createElement("BUTTON")
+            btn.style.color = "black";
+            btn.style.border = "0";
+            btn.style.backgroundColor = "#eaeff2";
+            btn.style.boxShadow = "none";
+            btn.style.borderRadius = "3px";
+            btn.style.height = "42px";
+            btn.style.position = "relative";
+            btn.style.right = "145px";
+            btn.style.top = "72px";
+            btn.style.paddingLeft = "4px";
+            btn.style.paddingRight = "4px";
+            btn.style.width = "120px";
+            btn.style.fontWeight = "bold";
+            
+            var expiry = document.createTextNode('Expires in: ' + expiry + ' days');
+            btn.appendChild(expiry);
             
             
             div.appendChild(btn);
+            
+            
+            var progress = document.createElement("PROGRESS")
+            progress.max = "1";
+            progress.value = "1";
+            progress.style.webkitAppearence = "none";
+            progress.style.background = "orangered";
+            progress.style.position = "relative";
+            progress.style.top = "50px";
+            progress.style.left = "70px";
+            
+            div.appendChild(progress);
             
             
             
@@ -451,6 +537,7 @@
             var k = keys[i];
             
             var name = Meats[k].name;
+            var expiry = Meats[k].expiry;
         //    var amount = fridge[k].amount;
         //    var expiry = fridge[k].expiry;
             
@@ -460,7 +547,7 @@
                 if (i % 2 == 0) {
             
                 var div = document.createElement("DIV")
-                div.style.height = "100px";
+                div.style.height = "130px";
                 div.style.width = "100%";
                 div.style.padding = "0px !important";
                 div.style.backgroundColor = "#A1A194";
@@ -471,7 +558,7 @@
             else {
                 
                   var div = document.createElement("DIV")
-                div.style.height = "100px";
+                div.style.height = "130px";
                 div.style.width = "100%";
                 div.style.padding = "0px !important";
                 div.style.backgroundColor = "#434247";
@@ -481,7 +568,7 @@
                 
             }
             
-            var btn = document.createElement("BUTTON")
+              var btn = document.createElement("BUTTON")
             btn.style.color = "black";
             btn.style.border = "0";
             btn.style.backgroundColor = "#eaeff2";
@@ -489,8 +576,8 @@
             btn.style.borderRadius = "3px";
             btn.style.height = "40px";
             btn.style.position = "relative";
-            btn.style.right = "30%";
-            btn.style.top = "15px";
+            btn.style.right = "45px";
+            btn.style.top = "5px";
             btn.style.paddingLeft = "4px";
             btn.style.paddingRight = "4px";
             btn.style.width = "100px";
@@ -501,12 +588,40 @@
             var t = document.createTextNode(name);
             btn.appendChild(t);
             
-            var p = document.createElement("p");
-            p.style.color = "#eaeff2";
-            p.style.backgroundColor = "#A1A194";
+             div.appendChild(btn);
+            
+             var btn = document.createElement("BUTTON")
+            btn.style.color = "black";
+            btn.style.border = "0";
+            btn.style.backgroundColor = "#eaeff2";
+            btn.style.boxShadow = "none";
+            btn.style.borderRadius = "3px";
+            btn.style.height = "42px";
+            btn.style.position = "relative";
+            btn.style.right = "145px";
+            btn.style.top = "72px";
+            btn.style.paddingLeft = "4px";
+            btn.style.paddingRight = "4px";
+            btn.style.width = "120px";
+            btn.style.fontWeight = "bold";
+            
+            var expiry = document.createTextNode('Expires in: ' + expiry + ' days');
+            btn.appendChild(expiry);
             
             
             div.appendChild(btn);
+            
+            
+            var progress = document.createElement("PROGRESS")
+            progress.max = "1";
+            progress.value = "1";
+            progress.style.webkitAppearence = "none";
+            progress.style.background = "orangered";
+            progress.style.position = "relative";
+            progress.style.top = "50px";
+            progress.style.left = "70px";
+            
+            div.appendChild(progress);
             
             
             
@@ -593,15 +708,12 @@
 </head>
 <body id="length">
     
-    <!-- The nav bar that interacts with the jquery slider -->
-    <div id="preloader">
-	   <div id="status">&nbsp;</div>
-    </div>
+     <div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
     
     <nav id="menu" class="menu">
-        <header class="menu-header">
-            <div id="account-details"></div>
-        </header>
+        <header class="menu-header"></header>
         <section class="menu-section">
             <h3 class="menu-section-title">Navigation</h3>
             <ul class="menu-section-list">
@@ -615,11 +727,9 @@
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="affiliated.html">Affiliated Apps</a></li>
-                <li><a href="javascript:signOut();">Sign Out</a></li>
             </ul>
         </section>
-    </nav> 
-    <!-- End of navigation -->   
+    </nav>  
 
     <main id="panel" class="panel">
       <header class="panel-header">
