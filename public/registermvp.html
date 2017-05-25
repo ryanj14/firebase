@@ -121,8 +121,9 @@
     </nav> 
     <!-- End of navigation --> 
     
-    <div id="weo">
-    <main id="panel" class="panel">
+
+<main id="panel" class="panel">
+    
       <header class="panel-header">
           <div class="wedaBest col-md-12">
               <div class="img-container col-xs-1 col-md-1">
@@ -157,9 +158,9 @@
     <!-- End of jQuery slider -->
         
     <div class="core-container">         
-            <div class="col-xs-12 col-md-12 title-container" class="headerBackground">
-                <p class="virtual-char">Hello there, ready to make a difference?        
-            </div>
+        <div class="col-xs-12 col-md-12 title-container" class="headerBackground">
+            <p class="virtual-char">Hello there, ready to make a difference?      
+        </div>
     </div>
     
     <div class="col-md-3"></div>
@@ -168,22 +169,15 @@
                 
                 <legend>Register a new Account</legend><i class="glyphicon glyphicon-user"></i>
                 
-                <div class="username">First Name</div><input name="firstname" type="text" required="required" class="glowing-border"><br><br><i class="glyphicon glyphicon-lock"></i>
+                <div class="username">Username</div><input name="username" type="text" required="required" class="glowing-border"><br><br>
                 
-                <div class="username">Last Name</div><input name="lastname" type="text" required="required" class="glowing-border"><br><br><i class="glyphicon glyphicon-lock"></i>
-                
-                <div class="username">Username</div><input name="username" type="text" required="required" class="glowing-border"><br><br><i class="glyphicon glyphicon-lock"></i>
+                <div class="glyphicon glyphicon-envelope"></div>&nbsp;<div class="email">Email</div><input name="email" type="email" required="required" class="glowing-border"><br><br><i class="glyphicon glyphicon-lock"></i>
                 
                 <div class="password">Password</div><input name="password" type="password" required="required" id="checkPass" class="glowing-border"><br><br><i class="glyphicon glyphicon-lock"></i>
                 
                 <div class="password1">Re-enter Password</div> <input name="password2" type="password" required="required" id="checkPass1" onChange="checkPassword()" class="glowing-border"><br><br>
                 
                 <div class="alert"><p id="alert"></p></div>
-                
-                <div class="glyphicon glyphicon-envelope"></div>&nbsp;<div class="email">Email</div><input name="email" type="email" required="required" class="glowing-border"><br><br>
-                
-                <input type="radio" name="gender" value="0">Male
-                <input type="radio" name="gender" value="1">Female<br><br>
                 
                 <input type="submit">
             </fieldset>
@@ -203,7 +197,8 @@
 	//]]>
     </script>
     <!-- End of preloader -->
-        
+       
+    <!-- Signout function -->
     <script>
         function signOut(){
         firebase.auth().signOut().then(function() {
@@ -215,7 +210,7 @@
         });
         }
     </script>
-        
-</div>
+    <!-- End of signout function -->
+    
 </body>
 </html>
