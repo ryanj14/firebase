@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
-<!--    <script src="jquery-3.2.1.min.js"></script>-->
+
     <!--- Style Sheet --->
     <link rel="stylesheet" href="css/tipsandtricks.css">
     <link href="css/nav.css" rel="stylesheet" type="text/css">
-	<!-- Custom Fonts -->
-<!--	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/whhg.css">-->
+
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -21,7 +19,6 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="cleartype" content="on">
@@ -40,11 +37,16 @@
     
 </head>
 <body>
-         <div id="preloader">
-	<div id="status">&nbsp;</div>
-</div>
+    
+    <!-- The nav bar that interacts with the jquery slider -->
+    <div id="preloader">
+	   <div id="status">&nbsp;</div>
+    </div>
+    
     <nav id="menu" class="menu">
-        <header class="menu-header"></header>
+        <header class="menu-header">
+        <div id="account-details"></div>
+        </header>
         <section class="menu-section">
             <h3 class="menu-section-title">Navigation</h3>
             <ul class="menu-section-list">
@@ -58,9 +60,11 @@
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="affiliated.html">Affiliated Apps</a></li>
+                <li><a href="javascript:signOut();">Sign Out</a></li>
             </ul>
         </section>
     </nav> 
+    <!-- End of navigation -->  
     
     <main id="panel" class="panel">
       <header class="panel-header">
@@ -104,31 +108,27 @@
     </div>
         
     <div class="panel-group" id="accordion">
-   <div class="container">
-       <div class="row">
-           <div data-parent="#accordion" data-toggle="collapse" data-target="#demo" class=" article-bg-fridge">
-              
+    <div class="container">
+        <div class="row">
+            <div data-parent="#accordion" data-toggle="collapse" data-target="#demo" class=" article-bg-fridge">
                    <div class="article">
-                       <p class="col-md-11 col-xs-10">Organize Your Fridge
-                           
-                       </p>
-                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">
-                           </i>
+                       <p class="col-md-11 col-xs-10">Organize Your Fridge</p>
+                       <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;"></i>
                    </div>
              </div>
-           
-                    <div id="demo" class="collapse content-text">&#9679;	<strong>Top Shelf</strong> – The top shelf is the warmest part of the fridge compartment and best for pre-prepared foods such as yogurt, cheese and sauces. Store cooked meat and leftovers in sealed containers on the shelves underneath. If there’s space, keep milk here too – it’ll keep for longer than it would in the door rack where it’s warmed by hot air whenever the door is opened.<br><br>
+                        <div id="demo" class="collapse content-text">&#9679;	<strong>Top Shelf</strong> – The top shelf is the warmest part of the fridge compartment and best for pre-prepared foods such as yogurt, cheese and sauces. Store cooked meat and leftovers in sealed containers on the shelves underneath. If there’s space, keep milk here too – it’ll keep for longer than it would in the door rack where it’s warmed by hot air whenever the door is opened.<br><br>
                         &#9679;	<strong>Bottom</strong> shelf – This is the coldest part of the fridge, so keep raw meat, fish and poultry in its sealed packaging, or place it in sealed containers and store on the bottom shelf. Plus, there’s less risk of raw juices dripping onto ready-to-eat foods.<br><br>
                         &#9679;	<strong>Salad crisper drawer</strong> – Store fruit and vegetables in the salad crisper drawer. Some come with humidity controls to retain moisture which will help certain vegetables, such as lettuce, cucumber, cauliflower, broccoli, beans, carrots and leafy veg, last longer.<br><br>
                         &#9679;	<strong>Door racks</strong> – The temperature in the door racks can fluctuate because they’re exposed to the warm air of the kitchen when the door is opened. The door racks are a good place for condiments, jam and fruit juice. A lidded compartment is ideal for keeping butter and margarine extra cold.
-</div>
+           </div>
         
        </div>
     </div>
     
     <div class="container">
        <div class="row">
-        <div class=" article-bg-bread" data-parent="#accordion" data-toggle="collapse" data-target="#demo1"><div class="article">
+        <div class=" article-bg-bread" data-parent="#accordion" data-toggle="collapse" data-target="#demo1">
+                    <div class="article">
                        <p class="col-md-11 col-xs-10">Bread Tips
                        </p>
                        <i class="fa fa-chevron-down col-md-1 col-xs-1" aria-hidden="true" style="text-align:right;">

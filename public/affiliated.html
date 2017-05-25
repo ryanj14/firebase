@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
-<!--    <script src="jquery-3.2.1.min.js"></script>-->
+
     <!--- Style Sheet --->
-     <link rel="stylesheet" href="css/affiliates.css">
+    <link rel="stylesheet" href="css/affiliates.css">
     <link href="css/nav.css" rel="stylesheet" type="text/css">
-   
-	<!-- Custom Fonts -->
-<!--	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
     
-     <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- jQuery library -->
@@ -22,7 +19,6 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="cleartype" content="on">
@@ -30,6 +26,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
     <link rel="stylesheet" href="test.css">
     <link rel="stylesheet" href="index.css">
     
@@ -39,15 +36,17 @@
       .box { height: 1500px; }
     </style>
     
-    </head>
+</head>
 <body>
     
-         <div id="preloader">
-	<div id="status">&nbsp;</div>
-</div>
+    <div id="preloader">
+	   <div id="status">&nbsp;</div>
+    </div>
     
     <nav id="menu" class="menu">
-        <header class="menu-header"></header>
+        <header class="menu-header">
+        <div id="account-details"></div>
+        </header>
         <section class="menu-section">
             <h3 class="menu-section-title">Navigation</h3>
             <ul class="menu-section-list">
@@ -61,6 +60,7 @@
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="affiliated.html">Affiliated Apps</a></li>
+                <li><a href="javascript:signOut();">Sign Out</a></li>
             </ul>
         </section>
     </nav>    
@@ -77,8 +77,7 @@
           </button>
       </header>
 
-        <!-- The slideout jquery navigation bar code-->
-      
+    <!-- The slideout jquery navigation bar code-->    
     <script src="dist/slideout.js"></script>
     <script>
       window.onload = function() {
@@ -101,7 +100,7 @@
         <!--End of jquery slider code -->
 
         <!-- The affiliate app information -->
-<div class="affiliate-container">
+    <div class="affiliate-container">
     <div class="title-container">
         <p>Affiliated Apps</p>
     </div>
@@ -168,15 +167,15 @@
     </main>
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-<!-- Preloader -->
-<script type="text/javascript">
-	//<![CDATA[
-		$(window).on('load', function() { // makes sure the whole site is loaded 
-			$('#status').fadeOut(); // will first fade out the loading animation 
-            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-            $('body').delay(350).css({'overflow':'visible'});
-		})
-	//]]>
-</script> 
+    <!-- Preloader -->
+    <script type="text/javascript">
+        //<![CDATA[
+            $(window).on('load', function() { // makes sure the whole site is loaded 
+                $('#status').fadeOut(); // will first fade out the loading animation 
+                $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+                $('body').delay(350).css({'overflow':'visible'});
+            })
+        //]]>
+    </script> 
     </body>
 </html>

@@ -42,12 +42,15 @@
 </head>
 <body>
     
-         <div id="preloader">
-	<div id="status">&nbsp;</div>
-</div>
     <!-- The nav bar that interacts with the jquery slider -->
+    <div id="preloader">
+	   <div id="status">&nbsp;</div>
+    </div>
+    
     <nav id="menu" class="menu">
-        <header class="menu-header"></header>
+        <header class="menu-header">
+        <div id="account-details"></div>
+        </header>
         <section class="menu-section">
             <h3 class="menu-section-title">Navigation</h3>
             <ul class="menu-section-list">
@@ -61,10 +64,11 @@
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="affiliated.html">Affiliated Apps</a></li>
+                <li><a href="javascript:signOut();">Sign Out</a></li>
             </ul>
         </section>
-    </nav>
-    <!-- End of navigation -->    
+    </nav> 
+    <!-- End of navigation -->     
     
     <main id="panel" class="panel">
       <header class="panel-header">

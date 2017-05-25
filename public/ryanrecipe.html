@@ -42,12 +42,16 @@
     
 </head>
 <body>
-         <div id="preloader">
-	<div id="status">&nbsp;</div>
-</div>
+    
     <!-- The nav bar that interacts with the jquery slider -->
+    <div id="preloader">
+	   <div id="status">&nbsp;</div>
+    </div>
+    
     <nav id="menu" class="menu">
-        <header class="menu-header"></header>
+        <header class="menu-header">
+        <div id="account-details"></div>
+        </header>
         <section class="menu-section">
             <h3 class="menu-section-title">Navigation</h3>
             <ul class="menu-section-list">
@@ -61,9 +65,10 @@
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="affiliated.html">Affiliated Apps</a></li>
+                <li><a href="javascript:signOut();">Sign Out</a></li>
             </ul>
         </section>
-    </nav>
+    </nav> 
     <!-- End of navigation -->    
     
     <main id="panel" class="panel">
@@ -78,8 +83,7 @@
           </button>
       </header>
 
-        <!-- The slideout jquery navigation bar code-->
-      
+    <!-- The slideout jquery navigation bar code--> 
     <script src="dist/slideout.js"></script>
     <script>
       window.onload = function() {
@@ -153,18 +157,20 @@
         </div>
     </div>
 </div>
-</main>  
-       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</main> 
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-<!-- Preloader -->
-<script type="text/javascript">
-	//<![CDATA[
+    <!-- Preloader -->
+    <script type="text/javascript">
+    //<![CDATA[
 		$(window).on('load', function() { // makes sure the whole site is loaded 
 			$('#status').fadeOut(); // will first fade out the loading animation 
             $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
             $('body').delay(350).css({'overflow':'visible'});
 		})
 	//]]>
-</script> 
+    </script>
+    
 </body>
 </html>
