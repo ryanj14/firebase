@@ -1,0 +1,52 @@
+.ingredients-header{
+    padding-bottom: 10px;
+    border-radius: 20px;
+    background-color: #0E735D;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.ingredients-container{
+    border:1px solid;
+    border-radius: 20px;
+    text-align: left;
+    background-color: #eaeff2;
+}
+
+.directions-header{
+    padding-bottom: 10px;
+    border-radius: 20px;
+    background-color: #0E735D;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.direction-container{
+     border:1px solid;
+    border-radius: 20px;
+    text-align: left;
+    background-color: #eaeff2;
+}
+
+.list-item{
+    padding-top:10px;
+}
+
+.recipe-header{
+    height:50px;
+    color:white;
+    text-align:center;
+    font-size:30px;
+    padding-top:12px;
+    margin-top:10px;
+    border-top:1px solid white;
+    border-bottom:1px solid white;
+    
+}
+
+.congrats{color:white;
+font-size:25px;
+padding-bottom:10px;
+padding-top:10px}

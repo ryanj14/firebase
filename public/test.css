@@ -288,7 +288,7 @@ body {
 }
 @charset "utf-8";
 body {
-	overflow: hidden;
+	overflow: scroll;
 }
 
 /* Preloader */

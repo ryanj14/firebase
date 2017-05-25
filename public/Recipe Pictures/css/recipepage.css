@@ -1,0 +1,172 @@
+/* Recipes Page */
+
+.done {
+    
+    background-color:#0E735D;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius: 12px;
+    border:none;
+}
+
+.cancel {
+    
+    background-color: #f44336;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius:12px;
+    border: none;
+        
+}
+
+
+.recipeName {
+ 
+    font-weight: bold;
+    
+}
+
+
+.recipe {
+    
+    background-color: #0e735d;
+    opacity: 0.9;
+    font-size: 23px;
+    font-weight: bold;
+    color: #eaeff2;
+    height: 50px;
+    text-align: left;
+    
+}
+
+.recipe-bg {
+    
+    background-image: url(../images/Placeholder.png);
+    height: 100px;
+
+}
+.recipe-bg1 {
+    
+    background-image: url(../images/grilledcheeseG.jpg);
+    height: 100px;
+
+}
+/* .recipe-bg1:hover {
+    
+    background-image: url(../images/grilledcheese.jpg);
+    height: 100px;
+
+} do we want this highlight function?*/
+.recipe-bg2 {
+    
+    background-image: url(../images/chickenpastaG.JPG);
+    height: 100px;
+
+}
+.recipe-bg3 {
+    
+    background-image: url(../images/hamcheeseG.jpg);
+    height: 100px;
+
+}
+.recipe-bg4 {
+    
+    background-image: url(../images/eggsaladG.png.jpg);
+    height: 100px;
+
+}
+
+
+
+ .ingredients {
+    
+
+}
+
+/* Tips and trick CSS */
+
+.title-container {
+    text-align: center;
+    font-size:30px;
+    
+}
+
+.article-bg {
+    background-color: lawngreen;
+    height: 80px;
+    border-bottom: 1px solid green;
+}
+
+.article {
+    text-align: right;
+    padding-top:5px;
+}
+
+#demo {height:auto;
+
+    background-color: #A1A194;
+}
+
+#demo1 {height:auto;
+
+    background-color: #A1A194;
+}
+
+#demo2 {height:auto;
+
+    background-color: #A1A194;
+}
+
+#demo3 {height:auto;
+
+    background-color: #A1A194;
+}
+
+#demo4 {height:auto;
+
+    background-color: #A1A194;
+}
+
+#demo5 {height:auto;
+
+    background-color: #A1A194;
+}
+
+#demo6 {height:auto;
+
+    background-color: #A1A194;
+}
+
+#demo7 {height:auto;
+
+    background-color: #A1A194;
+}
+
+#demo8 {height:auto;
+
+    background-color: #A1A194;
+}
+
+.collapse.in {
+  display: block!important;
+    
+}
+
+/* Recipes CSS */
+
+.header-recipe h1 {
+    padding-top: 0px;
+    margin-top:0px;
+    text-align: left;
+    padding-left: 60px;
+    background-color:#8CC63F;
+    color: white;
+}
+
+/* .container {
+    
+    
+    padding-left: 0px;
+    padding-right: 0px;
+    
+} */
