@@ -39,9 +39,8 @@
     
     var database = firebase.database();
     
- 
     
-    function addVeg() {
+   function addVeg() {
         
         var data = {
             name: document.getElementById('name-veg').value,
@@ -52,7 +51,7 @@
         console.log(firebase);
         var ref = database.ref('Fridge/Vegetables');
         ref.push(data);
-    }
+    } 
     
     function addFruit() {
         
