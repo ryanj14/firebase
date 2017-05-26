@@ -11,9 +11,7 @@
     <link href="css/nav.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/frideMain.css">
 
-	<!-- Custom Fonts -->
-	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
+	
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -54,44 +52,27 @@
       firebase.initializeApp(config);
         database = firebase.database(); 
 
-    var ref = database.ref('Fridge/Vegetables');
+    var ref = database.ref('Fridge');
     ref.on('value', gotDataVeg);
        
     
     function gotDataVeg(data) {
         
-
-      //  console.log(data.val());
-        var Vegetables = data.val();
-    //    var fridge = data.val();
-         var keys = Object.keys(Vegetables);
-      //   var keys = Object.keys(fridge);
-
+        var Fridge = data.val();
+        var keys = Object.keys(Fridge);
         console.log(keys);
         var num = 0;
         for (var i = 0; i < keys.length; i++) {
             
             var k = keys[i];
             
-            var name = Vegetables[k].name;
-           var amount = Vegetables[k].amount;
-           var expiry = Vegetables[k].expiry;
-
-        //    var name = [k].name;
-          //  var amount = fridge[k].amount;
-        //    var expiry = fridge[k].expiry;
-
-            
-
-   
+            var name = Fridge[k].name;
+         
             var li = document.createElement("li");
             li.style.color = "white";
             li.style.display = "block";
             li.style.textAlign ="left";
-            
-
-        //   console.log(amount, expiry);
-        // makes new shelf after 4 items    
+           
         if (num > 3 && num < 5) {
                 
                 var div = document.createElement("DIV")

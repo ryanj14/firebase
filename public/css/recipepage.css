@@ -27,7 +27,7 @@
 }
 
 
-.recipe {
+p.recipe {
     
     background-color: #0e735d;
     opacity: 0.9;
@@ -51,12 +51,7 @@
     height: 100px;
 
 }
-/* .recipe-bg1:hover {
-    
-    background-image: url(../images/grilledcheese.jpg);
-    height: 100px;
 
-} do we want this highlight function?*/
 .recipe-bg2 {
     
     background-image: url(../images/chickenpastaG.JPG);
@@ -74,6 +69,28 @@
     background-image: url(../images/eggsaladG.png.jpg);
     height: 100px;
 
+}
+.recipe-bg5 {
+    
+    background-image: url(../recipe-pics/potato-salad1.jpg);
+    height: 100px;
+
+}
+.recipe-bg6 {
+    
+    background-image: url(../recipe-pics/turkey-waffles1.jpg);
+    height: 100px;
+}
+.recipe-bg7 {
+    
+    background-image: url(../recipe-pics/sausage-scramble1.jpg);
+    height: 100px;
+}
+.recipe-bg8 {
+    
+    background-image: url(../recipe-pics/roast-beef1.jpg);
+    height: 100px;
+    margin-top:-19px;
 }
 
 

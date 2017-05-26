@@ -43,52 +43,47 @@
    function addVeg() {
         
         var data = {
-            name: document.getElementById('name-veg').value,
-            amount: document.getElementById('number-veg').value,
-            expiry: document.getElementById('expiry-veg').value
+            name: document.getElementById('name-veg').value
             
         }
         console.log(firebase);
-        var ref = database.ref('Fridge/Vegetables');
+        var ref = database.ref('Fridge');
         ref.push(data);
     } 
     
     function addFruit() {
         
         var data = {
-            name: document.getElementById('name-fruit').value,
-            amount: document.getElementById('number-fruit').value,
-            expiry: document.getElementById('expiry-fruit').value
+            name: document.getElementById('name-fruit').value
+          
             
         }
         console.log(firebase);
-        var ref = database.ref('Fridge/Fruits');
+        var ref = database.ref('Fridge');
         ref.push(data);
     }
     
     function addDairy() {
         
         var data = {
-            name: document.getElementById('name-dairy').value,
-            amount: document.getElementById('number-dairy').value,
-            expiry: document.getElementById('expiry-dairy').value
+            name: document.getElementById('name-dairy').value
+           
             
         }
         console.log(firebase);
-        var ref = database.ref('Fridge/Dairy');
+        var ref = database.ref('Fridge');
         ref.push(data);
     }
     
     function addMeat() {
         
         var data = {
-            name: document.getElementById('name-meat').value,
-            amount: document.getElementById('number-meat').value,
-            expiry: document.getElementById('expiry-meat').value
+            name: document.getElementById('name-meat').value
+            
             
         }
         console.log(firebase);
-        var ref = database.ref('Fridge/Meats');
+        var ref = database.ref('Fridge');
         ref.push(data);
     }
     
@@ -97,13 +92,12 @@
     function addGrain() {
         
         var data = {
-            name: document.getElementById('name-grain').value,
-            amount: document.getElementById('number-grain').value,
-            expiry: document.getElementById('expiry-grain').value
+            name: document.getElementById('name-grain').value
+            
             
         }
         console.log(firebase);
-        var ref = database.ref('Fridge/Grains');
+        var ref = database.ref('Fridge');
         ref.push(data);
     }
     
@@ -236,19 +230,16 @@
         
         <div class="row">
             <div class="col-xs-1"></div>
-            <div class="col-xs-6 item-name" >
+            <div class="col-xs-12 item-name" >
             <input type="text" id="name-veg">
+                <input type="submit" value="Add" onclick="addVeg()" onclick="clear()" id="submit">
             </div>
+            
         </div>
-    <div class=" col-xs-9 input-holder">
-            <label>Amount</label>
-        <input type="text" class="food-amount" id="number-veg">
-            <label>Expiry</label>
-        <input type="text" class="food-expiry" id="expiry-veg">
-    </div>
+  
         
         
-         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="addVeg()" onclick="clear()" id="submit"></div>
+         
     
     </div>
    
@@ -267,19 +258,16 @@
         
         <div class="row">
             <div class="col-xs-1"></div>
-            <div class="col-xs-6 item-name">
+            <div class="col-xs-12 item-name" >
             <input type="text" id="name-fruit">
+                <input type="submit" value="Add" onclick="addFruit()" onclick="clear()" id="submit">
             </div>
+            
         </div>
-    <div class=" col-xs-9 input-holder">
-            <label>Amount</label>
-        <input type="text" class="food-amount" id="number-fruit">
-            <label>Expiry</label>
-        <input type="text" class="food-expiry" id="expiry-fruit">
-    </div>
+  
         
         
-         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="addFruit()" onclick="clear()" id="submit"></div>
+         
     
     </div>
    
@@ -303,19 +291,16 @@
         
         <div class="row">
             <div class="col-xs-1"></div>
-            <div class="col-xs-6 item-name">
+            <div class="col-xs-12 item-name" >
             <input type="text" id="name-grain">
+                <input type="submit" value="Add" onclick="addGrain()" onclick="clear()" id="submit">
             </div>
+            
         </div>
-    <div class=" col-xs-9 input-holder">
-            <label>Amount</label>
-        <input type="text" class="food-amount" id="number-grain">
-            <label>Expiry</label>
-        <input type="text" class="food-expiry" id="expiry-grain">
-    </div>
+  
         
         
-         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="addGrain()" onclick="clear()" id="submit"></div>
+         
     
     </div>
    
@@ -332,7 +317,7 @@
             
             
 <div class="panel">
-    <form>
+   <form>
     <div class=" food-holder">
         <div class="row">
             <div class="col-xs-2"></div>
@@ -342,19 +327,16 @@
         
         <div class="row">
             <div class="col-xs-1"></div>
-            <div class="col-xs-6 item-name">
+            <div class="col-xs-12 item-name" >
             <input type="text" id="name-dairy">
+                <input type="submit" value="Add" onclick="addDairy()" onclick="clear()" id="submit">
             </div>
+            
         </div>
-    <div class=" col-xs-9 input-holder">
-            <label>Amount</label>
-        <input type="text" class="food-amount" id="number-dairy">
-            <label>Expiry</label>
-        <input type="text" class="food-expiry" id="expiry-dairy">
-    </div>
+  
         
         
-         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="addDairy()" onclick="clear()" id="submit"></div>
+         
     
     </div>
    
@@ -381,19 +363,16 @@
         
         <div class="row">
             <div class="col-xs-1"></div>
-            <div class="col-xs-6 item-name">
+            <div class="col-xs-12 item-name" >
             <input type="text" id="name-meat">
+                <input type="submit" value="Add" onclick="addMeat()" onclick="clear()" id="submit">
             </div>
+            
         </div>
-    <div class=" col-xs-9 input-holder">
-            <label>Amount</label>
-        <input type="text" class="food-amount" id="number-meat">
-            <label>Expiry</label>
-        <input type="text" class="food-expiry" id="expiry-meat">
-    </div>
+  
         
         
-         <div class="col-xs-1 submit-button"><input type="submit" value="Add" onclick="addMeat()" onclick="clear()" id="submit"></div>
+         
     
     </div>
    

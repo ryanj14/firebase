@@ -55,6 +55,7 @@ input[type=text] {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 18px;
+    color:black;
 }
 
 input[type=password] {
@@ -66,6 +67,7 @@ input[type=password] {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 18px;
+    color:black;
 }
 
 
@@ -78,11 +80,12 @@ input[type=email] {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 18px;
+    color:black;
 }
 
 .alert {
     padding: 10px;
-    background-color: #EAEFF2;
+    background-color: #434247;
     color: white;
     text-align: center;
 }
@@ -102,6 +105,8 @@ form {
 #alert { 
     padding: 5px;
     text-align: center;
+        background-color: #434247;
+
 }
 
 .virtual-char{
