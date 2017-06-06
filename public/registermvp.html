@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <title>Register</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,8 +33,7 @@
             document.getElementById('alert').style.backgroundColor = '#f44336';
         } else {
             document.getElementById('alert').innerHTML = "Passwords match!";
-            document.getElementById('alert').style.backgroundColor = 'green';
-            
+            document.getElementById('alert').style.backgroundColor = 'green';        
         }
     }      
     </script>
@@ -190,13 +190,13 @@
 
     <!-- Preloader -->
     <script type="text/javascript">
-	//<![CDATA[
-		$(window).on('load', function() { // makes sure the whole site is loaded 
-			$('#status').fadeOut(); // will first fade out the loading animation 
-            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-            $('body').delay(350).css({'overflow':'visible'});
-		})
-	//]]>
+        //<![CDATA[
+            $(window).on('load', function() { // makes sure the whole site is loaded 
+                $('#status').fadeOut(); // will first fade out the loading animation 
+                $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+                $('body').delay(350).css({'overflow':'visible'});
+            })
+        //]]>
     </script>
     <!-- End of preloader -->
        

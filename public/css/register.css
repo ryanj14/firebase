@@ -1,5 +1,3 @@
-/* Register CSS */
-
 #registerCentered {
 	margin-left: auto;
 	margin-right: auto;
@@ -11,23 +9,23 @@
     float: none;
 }
 
-.email{
+.email {
     display:inline;
 }
 
-.username{
+.username {
     display: inline;
 }
 
-.password{
+.password {
     display: inline;
 }
 
-.password1{
+.password1 {
     display: inline;
 }
 
-legend{
+legend {
     font-size:20px !important;
     text-align: center;
     color:white !important;
@@ -70,7 +68,6 @@ input[type=password] {
     color:black;
 }
 
-
 input[type=email] {
     width: 100%;
     padding: 12px 20px;
@@ -91,13 +88,10 @@ input[type=email] {
 }
 
 fieldset {
-    margin-top: 50px !important;  
-    
-    
+    margin-top: 50px !important;    
 }
 
-form {
-    
+form {   
     background-color: #434247;
     color:white;
 }
@@ -105,11 +99,10 @@ form {
 #alert { 
     padding: 5px;
     text-align: center;
-        background-color: #434247;
-
+    background-color: #434247;
 }
 
-.virtual-char{
+.virtual-char {
     font-size: 30px;
     color:white;
     padding-top: 10px;
@@ -122,6 +115,7 @@ form {
     padding-top: 10px;
     background-color: #434247;
 }
+
 .glowing-border {
     border: 2px solid #dadada;
     border-radius: 7px;
