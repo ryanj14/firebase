@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <title>Fridge Home</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
-    
     <!--- Style Sheet --->
-    <link href="css/nav.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/frideMain.css">
+    
+    <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
 
-	
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -28,14 +27,11 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="test.css">
-    <link rel="stylesheet" href="index.css">
     
-    <style>
-      .slideout-menu { left: auto; }
-      .btn-hamburger { left: auto; right: 12px;}
-      .box { height: 1500px; }       
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
     
     <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
     <script>
@@ -53,8 +49,7 @@
         database = firebase.database(); 
 
     var ref = database.ref('Fridge');
-    ref.on('value', gotDataVeg);
-       
+    ref.on('value', gotDataVeg);      
     
     function gotDataVeg(data) {
         
@@ -220,13 +215,9 @@
             num++;
         }
     }
-    
-    
-    
-    
-    
     </script>
-<!-- highlights the selected food icons so users can tell what they've selected -->
+    
+    <!-- highlights the selected food icons so users can tell what they've selected -->
     <script>
 
     var count = 1;
@@ -239,22 +230,15 @@
 
                 if (food[i].style.backgroundColor == "") {
                 food[i].style.backgroundColor="#b1d0ca"
-
+                    
+                } else {
+                    food[i].style.backgroundColor=""
                 }
-
-                 else {
-                food[i].style.backgroundColor=""
-
-            }
-
             }
         }
     }
 
     onload=selected
-
-
-    
     </script>
     
     <script>       
@@ -288,7 +272,7 @@
     
     <nav id="menu" class="menu">
         <header class="menu-header">
-        <div id="account-details"></div>
+            <div id="account-details"></div>
         </header>
         <section class="menu-section">
             <h3 class="menu-section-title">Navigation</h3>
@@ -341,30 +325,37 @@
       };
     </script>
 
-          <div class="row">
-              <div><ul id="fridgelist" id="buttons" class="buttons"></ul></div>
-          <div class="col-xs-12 shelf hidden-md hidden-lg"></div> 
-             <div><ul id="fridgelist1"></ul></div>
-            <div id="newShelf"></div>
-              <div><ul id="fridgelist2"></ul></div>
-              <div id="newShelf2"></div> 
-               <div><ul id="fridgelist3"></ul></div>
-              <div id="newShelf3"></div> 
-              <div><ul id="fridgelist4"></ul></div>
-              <div id="newShelf4"></div>
-              <div><ul id="fridgelist5"></ul></div>
-              <div id="newShelf5"></div>
-              <div><ul id="fridgelist6"></ul></div>
-              <div id="newShelf6"></div>
-              <div><ul id="fridgelist7"></ul></div>
-              <div id="newShelf7"></div>
+    <div class="row">
+        <div>
+            <ul id="fridgelist" id="buttons" class="buttons"></ul>
+        </div>
+        <div class="col-xs-12 shelf hidden-md hidden-lg"></div> 
+        <div><ul id="fridgelist1"></ul></div>    
+        <div id="newShelf"></div> 
+        <div><ul id="fridgelist2"></ul></div>
+        <div id="newShelf2"></div> 
+        <div><ul id="fridgelist3"></ul></div>
+        <div id="newShelf3"></div> 
+        <div><ul id="fridgelist4"></ul></div>
+        <div id="newShelf4"></div>
+        <div><ul id="fridgelist5"></ul></div>
+        <div id="newShelf5"></div>
+        <div><ul id="fridgelist6"></ul></div>
+        <div id="newShelf6"></div>
+        <div><ul id="fridgelist7"></ul></div>
+        <div id="newShelf7"></div>
+    </div>
+        
+    <div class="fixPosition" class="panel-footer-fridge">
+        <button id="removeButton">Get Recipes</button>
+    </div>
+        
+    <div class="fixPosition" class="panel-footer-fridge">
+        <button id="recipeButton">Remove</button>
     </div>
 
-        
-<div class="fixPosition" class="panel-footer-fridge"><button id="removeButton">Get Recipes</button></div><div class="fixPosition" class="panel-footer-fridge"><button id="recipeButton">Remove</button></div>
-        
-
-    </main>
+</main>
+    
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <!-- Preloader -->
@@ -390,6 +381,5 @@
         }
     </script>
     
-    </body>
-</html>
-    
+</body>
+</html>  

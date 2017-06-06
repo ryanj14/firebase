@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <title>Contact Us</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,8 @@
     <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
 
     <!--- Style Sheet --->
-    <link rel="stylesheet" href="css/contact.css">
-    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
 
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,14 +27,11 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="test.css">
-    <link rel="stylesheet" href="index.css">
     
-    <style>
-      .slideout-menu { left: auto; }
-      .btn-hamburger { left: auto; right: 12px; top: 0;}
-      .box { height: 1500px; }
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
     
     <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
     <script>
@@ -50,24 +48,24 @@
     </script>
     
     <script>       
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        // User is signed in.
-          console.log(user.displayName);
-      var name = user.displayName;
-      var email = user.email;
- 
-          user.getIdToken().then(function(accessToken) {
-                                 document.getElementById("account-details").textContent = JSON.stringify({
-              name,
-            email
-          });
-                                 });
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+              console.log(user.displayName);
+          var name = user.displayName;
+          var email = user.email;
 
-      } else {
-        // No user is signed in.
-      }
-    });
+              user.getIdToken().then(function(accessToken) {
+            document.getElementById("account-details").textContent = JSON.stringify({
+                  name,
+                  email
+              });
+          });
+
+          } else {
+            // No user is signed in.
+          }
+        });
     </script>
     
 </head>
@@ -80,7 +78,7 @@
     
     <nav id="menu" class="menu">
         <header class="menu-header">
-        <div id="account-details"></div>
+            <div id="account-details"></div>
         </header>
         <section class="menu-section">
             <h3 class="menu-section-title">Navigation</h3>
@@ -101,20 +99,24 @@
     </nav> 
     <!-- End of navigation -->     
     
-    <main id="panel" class="panel">
-      <header class="panel-header">
-          <div class="wedaBest col-md-12">
-              <div class="img-container col-xs-1 col-md-1">
-                  <a href="index.html"><div class="mvf">MV<div   class="mvf1">F</div></div></a>
-              </div>
+<main id="panel" class="panel">
+    
+    <header class="panel-header">
+        <div class="wedaBest col-md-12">
+          <div class="img-container col-xs-1 col-md-1">
+              <a href="index.html">
+                  <div class="mvf">MV
+                      <div class="mvf1">F</div>
+                  </div>
+              </a>
           </div>
-          <button class="btn-hamburger js-slideout-toggle">
-              <i class="fa fa-bars" aria-hidden="true"></i>
-          </button>
-      </header>
+        </div>
+        <button class="btn-hamburger js-slideout-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+    </header>
 
-        <!-- The slideout jquery navigation bar code-->
-      
+    <!-- The slideout jquery navigation bar code-->  
     <script src="dist/slideout.js"></script>
     <script>
       window.onload = function() {
@@ -135,60 +137,68 @@
     </script>     
     <!--End of jquery slider code -->
 
-<div class="container2">
-    <div class="col-md-12 push-md-12"></div>
-
-    <!-- The contact page info -->
-     
-        <div class="title-container">Contact Us</div>
-            <div class="border col-md-12 pull-md-12"></div>
-    
-            <div class="affiliates col-md-6 col-xs-12">     
-                <div class="something">
-                    <div class="aff-image col-md-2 col-xs-3">
-                        <img src="images/contact/devan.jpg" height="80px">
-                    </div>
-                    <div class="aff-descrip col-xs-6 col-md-7">
-                        <p><strong>Devan Purhar</strong></p><p>Hey whatsup hello.</p><p>devan@goat.com</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="affiliates1 col-md-6 col-xs-12">
-                <div class="something">
-                    <div class="aff-image col-md-2 col-xs-3">
-                        <img src="images/contact/maz.jpg" height="80px">
-                    </div>
-                    <div class="aff-descrip col-xs-6 col-md-7">
-                        <p><strong>Maz AriMandi</strong></p><p>It's litty!</p><p>hugeballer@mail.com</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="affiliates col-md-6 col-xs-12">
-                <div class="something">
-                    <img src="images/contact/greg.jpg" height="80px">
-                    <div class="aff-descrip col-xs-6 col-md-7">
-                        <p><strong>Greg Torney</strong></p><p>Hey it's me Gregorio!</p><p>greg@mail.com</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="affiliates1 col-md-6 col-xs-12">
-                <div class="something">
-                    <div class="aff-image col-md-2 col-xs-3">
-                        <img src="images/meats/002-food-8.png">
-                    </div>
-                    <div class="aff-descrip col-xs-6 col-md-7">
-                        <p><strong>Ryan Joseph</strong></p><p>A nice description about Ryan.</p><p>ryan@mail.com</p>
-                    </div>
-                </div>
-            </div>
-    
-        </div>
-        <!-- End of contact info -->
+    <div class="container2">
         
-    </main>
+        <div class="col-md-12 push-md-12"></div>
+
+        <!-- The contact page info -->
+        <div class="title-container">Contact Us</div>
+        <div class="border col-md-12 pull-md-12"></div>
+
+        <div class="affiliates col-md-6 col-xs-12">     
+            <div class="something">
+                <div class="aff-image col-md-2 col-xs-3">
+                    <img src="images/contact/devan.jpg" height="80px">
+                </div>
+                <div class="aff-descrip col-xs-6 col-md-7">
+                    <p><strong>Devan Purhar</strong></p>
+                    <p>Hey whatsup hello.</p>
+                    <p>devan@goat.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="affiliates1 col-md-6 col-xs-12">
+            <div class="something">
+                <div class="aff-image col-md-2 col-xs-3">
+                    <img src="images/contact/maz.jpg" height="80px">
+                </div>
+                <div class="aff-descrip col-xs-6 col-md-7">
+                    <p><strong>Maz AriMandi</strong></p>
+                    <p>It's litty!</p>
+                    <p>hugeballer@mail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="affiliates col-md-6 col-xs-12">
+            <div class="something">
+                <img src="images/contact/greg.jpg" height="80px">
+                <div class="aff-descrip col-xs-6 col-md-7">
+                    <p><strong>Greg Torney</strong></p>
+                    <p>Hey it's me Gregorio!</p>
+                    <p>greg@mail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="affiliates1 col-md-6 col-xs-12">
+            <div class="something">
+                <div class="aff-image col-md-2 col-xs-3">
+                    <img src="images/meats/002-food-8.png">
+                </div>
+                <div class="aff-descrip col-xs-6 col-md-7">
+                    <p><strong>Ryan Joseph</strong></p>
+                    <p>A nice description about Ryan.</p>
+                    <p>ryan@mail.com</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- End of contact info -->
+        
+</main>
     
     <script type="text/javascript">
         //<![CDATA[

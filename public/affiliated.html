@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <title>Affiliated Apps</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,7 @@
     <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
 
     <!--- Style Sheet --->
-    <link rel="stylesheet" href="css/affiliates.css">
-    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/affiliates.css">
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -27,14 +27,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     
-    <link rel="stylesheet" href="test.css">
-    <link rel="stylesheet" href="index.css">
-    
-    <style>
-      .slideout-menu { left: auto; }
-      .btn-hamburger { left: auto; right: 12px; top: 0;}
-      .box { height: 1500px; }
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
     
     <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
     <script>
@@ -100,17 +96,22 @@
         </section>
     </nav>    
     
-    <main id="panel" class="panel">
-      <header class="panel-header">
-          <div class="wedaBest col-md-12">
-              <div class="img-container col-xs-1 col-md-1">
-                  <a href="index.html"><div class="mvf">MV<div   class="mvf1">F</div></div></a>
-              </div>
-          </div>
-          <button class="btn-hamburger js-slideout-toggle">
-              <i class="fa fa-bars" aria-hidden="true"></i>
-          </button>
-      </header>
+<main id="panel" class="panel">
+    
+    <header class="panel-header">
+        <div class="wedaBest col-md-12">
+            <div class="img-container col-xs-1 col-md-1">
+                <a href="index.html">
+                  <div class="mvf">MV
+                      <div class="mvf1">F</div>
+                  </div>
+                </a>
+            </div>
+        </div>
+        <button class="btn-hamburger js-slideout-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+    </header>
 
     <!-- The slideout jquery navigation bar code-->    
     <script src="dist/slideout.js"></script>
@@ -130,19 +131,20 @@
           if (eve.target.nodeName === 'A') { slideout.close(); }
         });
       };
-    </script>
-        
-        <!--End of jquery slider code -->
+    </script>   
+    <!--End of jquery slider code -->
 
-        <!-- The affiliate app information -->
-    <div class="affiliate-container">
+    <!-- The affiliate app information -->
+<div class="affiliate-container">
     <div class="title-container">
         <p>Affiliated Apps</p>
     </div>
          <div class="affiliates1 col-md-6 col-xs-12">
            <div class="row">
                     <div class="aff-image1 col-md-12 col-xs-12">
-                        <a href=""><img class="meal" src="images/affiliates/mealio-app-logo2.png" style="border-radius: 15px;"></a>
+                        <a href="">
+                            <img class="meal" src="images/affiliates/mealio-app-logo2.png" style="border-radius: 15px;">
+                        </a>
                     </div>
             </div>    
             <div class="row">
@@ -154,13 +156,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="aff-descrip col-xs-12 col-md-12">App to help families manage the food in their lives
+                <div class="aff-descrip col-xs-12 col-md-12">
+                    App to help families manage the food in their lives
                 </div>
             </div>
         </div>
         <div class="affiliates col-md-6 col-xs-12">
             <div class="aff-image col-md-12 col-xs-12">
-                <a href="http://take2foods.com/index.php?i=1"><img src="images/affiliates/take2-logo-2.png" style="border-radius:10px;"></a>
+                <a href="http://take2foods.com/index.php?i=1">
+                    <img src="images/affiliates/take2-logo-2.png" style="border-radius:10px;">
+                </a>
             </div>
             <div class="row">
                 <div class="aff-content col-md-12 col-xs-12">
@@ -171,7 +176,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="aff-descrip col-xs-12 col-md-12">A website where you take two ingredients, and the user gets suggested recipes
+                <div class="aff-descrip col-xs-12 col-md-12">
+                    A website where you take two ingredients, and the user gets suggested recipes
                 </div>
             </div>
         </div>
@@ -180,7 +186,9 @@
         <div class="affiliates col-md-6 col-xs-12">
             <div class="row">
                 <div class="aff-image col-md-12 col-xs-12">
-                    <a href="http://eco-list.ca/index.html"><img src="images/affiliates/EcoLogo2%20-%20Copy.png" style="border-radius: 10px;"></a>
+                    <a href="http://eco-list.ca/index.html">
+                        <img src="images/affiliates/EcoLogo2%20-%20Copy.png" style="border-radius: 10px;">
+                    </a>
                 </div>
             </div>
             <div class="row">
@@ -192,15 +200,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="aff-descrip col-xs-12 col-md-12">Grocery list and meal planner</div>
+                <div class="aff-descrip col-xs-12 col-md-12">
+                    Grocery list and meal planner
+                </div>
             </div>
         </div>
 </div>
+<!-- End of affiliates information -->
         
-        <!-- End of affiliates information -->
-        
-    </main>
-       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</main>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <!-- Preloader -->
     <script type="text/javascript">
@@ -225,5 +235,5 @@
         }
     </script>
     
-    </body>
+</body>
 </html>

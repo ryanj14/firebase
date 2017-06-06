@@ -19,3 +19,14 @@
 }
 
 .dropdown {padding-top:5px;}
+
+.slideout-menu { 
+    left: auto; 
+}
+
+.btn-hamburger { 
+    left: auto; 
+    right: 10px; 
+}
+
+.box {height: 1500px;}

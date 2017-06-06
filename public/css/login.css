@@ -125,3 +125,8 @@ form {
 ul.firebaseui-idp-list{
     background-color:#434247;
 }
+
+.logIn {
+    font-weight: bold;
+    font-size: 24px; 
+}

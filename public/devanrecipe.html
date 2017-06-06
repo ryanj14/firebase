@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <title>Ceasar Salad</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,7 @@
     <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
     
     <!--- Style Sheet --->
-    <link rel="stylesheet" href="css/recipe.css">
-    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/recipe.css">
  
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,14 +26,11 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="test.css">
-    <link rel="stylesheet" href="index.css">
     
-    <style>
-      .slideout-menu { left: auto; }
-      .btn-hamburger { left: auto; right: 12px; top: 0;}
-      .box { height: 1500px; }
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
     
     <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
     <script>
@@ -50,24 +47,24 @@
     </script>
     
     <script>       
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        // User is signed in.
-          console.log(user.displayName);
-      var name = user.displayName;
-      var email = user.email;
- 
-          user.getIdToken().then(function(accessToken) {
-                                 document.getElementById("account-details").textContent = JSON.stringify({
-              name,
-            email
-          });
-                                 });
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+              console.log(user.displayName);
+          var name = user.displayName;
+          var email = user.email;
 
-      } else {
-        // No user is signed in.
-      }
-    });
+              user.getIdToken().then(function(accessToken) {
+                                     document.getElementById("account-details").textContent = JSON.stringify({
+                  name,
+                email
+              });
+                                     });
+
+          } else {
+            // No user is signed in.
+          }
+        });
     </script>
     
 </head>
@@ -101,17 +98,22 @@
     </nav> 
     <!-- End of navigation -->    
     
-    <main id="panel" class="panel">
-      <header class="panel-header">
-          <div class="wedaBest col-md-12">
-              <div class="img-container col-xs-1 col-md-1">
-                  <a href="index.html"><div class="mvf">MV<div   class="mvf1">F</div></div></a>
-              </div>
-          </div>
-          <button class="btn-hamburger js-slideout-toggle" style="border-radius:10px">
-              <i class="fa fa-bars" aria-hidden="true"></i>
-          </button>
-      </header>
+<main id="panel" class="panel">
+    
+    <header class="panel-header">
+        <div class="wedaBest col-md-12">
+            <div class="img-container col-xs-1 col-md-1">
+                <a href="index.html">
+                    <div class="mvf">MV
+                        <div class="mvf1">F</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <button class="btn-hamburger js-slideout-toggle" style="border-radius:10px">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+    </header>
 
     <!-- The slideout jquery navigation bar code--> 
     <script src="dist/slideout.js"></script>
@@ -122,11 +124,9 @@
           'menu': document.getElementById('menu'),
           'side': 'right'
         });
-
         document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
           slideout.toggle();
         });
-
         document.querySelector('.menu').addEventListener('click', function(eve) {
           if (eve.target.nodeName === 'A') { slideout.close(); }
         });
@@ -142,14 +142,14 @@
     
     <div class="row">
         <div class="image-header img-fluid">
-            <img src="images/ceasarsalad.jpg" style="border-radius:10px;">    
+            <img src="images/ceasarsalad.jpg" style="border-radius:10px;">   
         </div>
     </div>
     
     <div class="col-md-12 recipe-header">Ceasar Salad</div>
-    
+
     <div class="container container-border">
-        
+
         <div class="row">
             <div class="col-md-5"></div>
             <div class="col-md-2 ingredients-header"><h2>Ingredients</h2></div>
@@ -176,10 +176,18 @@
         <div class="row">
             <div class="col-md-12 direction-container">
                 <ol>
-                    <li class="list-item">Thoroughly wash Romain lettuce in sink</li>
-                    <li class="list-item">Break apart lettuce into small chuncks into a large bowl</li>
-                    <li class="list-item">Add parmesan, ceasar dressing, lemon juice to lettuce and mix thoroughly.</li>
-                    <li class="list-item">Add croutons, and serve!</li>      
+                    <li class="list-item">
+                        Thoroughly wash Romain lettuce in sink
+                    </li>
+                    <li class="list-item">
+                        Break apart lettuce into small chuncks into a large bowl
+                    </li>
+                    <li class="list-item">
+                        Add parmesan, ceasar dressing, lemon juice to lettuce and mix thoroughly.
+                    </li>
+                    <li class="list-item">
+                        Add croutons, and serve!
+                    </li>      
                 </ol>
             </div>
         </div>

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>    
+    
     <title>Fridge</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-      <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
+    <script src="https://use.fontawesome.com/6c5f8d3c8b.js"></script>
+    
     <!--- Style Sheet --->
-    <link rel="stylesheet" href="css/fridge.css">
-    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/fridge.css">
+    
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -28,17 +30,13 @@
         projectId: "my-virtual-fridge-6ff0b",
         storageBucket: "my-virtual-fridge-6ff0b.appspot.com",
         messagingSenderId: "520914821066"
-      };
-    
-
-    
+      }; 
     
   firebase.initializeApp(config);
     
     console.log(firebase);
     
     var database = firebase.database();
-    
     
    function addVeg() {
         
@@ -55,8 +53,7 @@
         
         var data = {
             name: document.getElementById('name-fruit').value
-          
-            
+             
         }
         console.log(firebase);
         var ref = database.ref('Fridge');
@@ -67,8 +64,7 @@
         
         var data = {
             name: document.getElementById('name-dairy').value
-           
-            
+                      
         }
         console.log(firebase);
         var ref = database.ref('Fridge');
@@ -78,16 +74,13 @@
     function addMeat() {
         
         var data = {
-            name: document.getElementById('name-meat').value
-            
+            name: document.getElementById('name-meat').value       
             
         }
         console.log(firebase);
         var ref = database.ref('Fridge');
         ref.push(data);
-    }
-    
-    
+    }  
     
     function addGrain() {
         
@@ -101,7 +94,6 @@
         ref.push(data);
     }
     
-    
     </script>
     
     <!-- jQuery slider -->
@@ -111,13 +103,11 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="test.css">
-    <link rel="stylesheet" href="index.css">
-    <style>
-      .slideout-menu { left: auto; }
-      .btn-hamburger { left: auto; right: 12px; top: 0;}
-      .box { height: 1500px; }
-    </style>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
     
     <script>       
     firebase.auth().onAuthStateChanged(function(user) {
@@ -150,7 +140,7 @@
     
     <nav id="menu" class="menu">
         <header class="menu-header">
-        <div id="account-details"></div>
+            <div id="account-details"></div>
         </header>
         <section class="menu-section">
             <h3 class="menu-section-title">Navigation</h3>
@@ -171,17 +161,22 @@
     </nav> 
     <!-- End of navigation -->  
 
-    <main id="panel" class="panel">
-      <header class="panel-header">
-          <div class="wedaBest col-md-12">
-              <div class="img-container col-xs-1 col-md-2">
-                  <a href="index.html"><div class="mvf">MV<div   class="mvf1">F</div></div></a>
-              </div>
-          </div>
-          <button class="btn-hamburger js-slideout-toggle">
-              <i class="fa fa-bars" aria-hidden="true"></i>
-          </button>
-        </header>
+<main id="panel" class="panel">
+    
+    <header class="panel-header">
+        <div class="wedaBest col-md-12">
+            <div class="img-container col-xs-1 col-md-2">
+              <a href="index.html">
+                  <div class="mvf">MV
+                      <div class="mvf1">F</div>
+                  </div>
+                </a>
+            </div>
+        </div>
+        <button class="btn-hamburger js-slideout-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+    </header>
 
         <!-- jQuery slider -->
     <script src="dist/slideout.js"></script>
@@ -200,8 +195,7 @@
         document.querySelector('.menu').addEventListener('click', function(eve) {
           if (eve.target.nodeName === 'A') { slideout.close(); }
         });
-      };
-        
+      };   
         
         function clear(){
            document.getElementById("name").reset();
@@ -209,200 +203,148 @@
     </script>
         
         
-        <div class="something col-md-12">  
+    <div class="something col-md-12"></div>
     <button class="accordion">
-        <div class="col-md-11 col-xs-10">VEGETABLES
-        </div>
+        <div class="col-md-11 col-xs-10">VEGETABLES</div>
         <div class="col-md-1 col-xs-1 icon-move">
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </div>
     </button>
      
 
-<div class="panel">
-    <form>
-    <div class=" food-holder">
-        <div class="row">
-            <div class="col-xs-2"></div>
-            <div class="col-md-2 col-xs-8 food-name">           <strong>Enter a Vegetable:</strong>
-            </div>
-         </div>
-        
-        <div class="row">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-12 item-name" >
-            <input type="text" id="name-veg">
-                <input type="submit" value="Add" onclick="addVeg()" onclick="clear()" id="submit">
-            </div>
-            
-        </div>
-  
-        
-        
-         
-    
-    </div>
-   
-    </form>
-</div>
+    <div class="panel">
+        <form>
+            <div class=" food-holder">
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div class="col-md-2 col-xs-8 food-name">           <strong>Enter a Vegetable:</strong>
+                    </div>
+                 </div>
 
-            <button class="accordion"><div class="col-md-11 col-xs-10">FRUITS</div><div class="col-md-1 col-xs-1 icon-move"><i class="fa fa-chevron-down" aria-hidden="true"></i></div></button>
-<div class="panel">
- <form>
-    <div class=" food-holder">
-        <div class="row">
-            <div class="col-xs-2"></div>
-            <div class="col-md-2 col-xs-8 food-name">           <strong>Enter a Fruit:</strong>
-            </div>
-         </div>
-        
-        <div class="row">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-12 item-name" >
-            <input type="text" id="name-fruit">
-                <input type="submit" value="Add" onclick="addFruit()" onclick="clear()" id="submit">
-            </div>
-            
-        </div>
-  
-        
-        
-         
-    
-    </div>
-   
-    </form>
-</div>
-            <button class="accordion">
-                <div class="col-md-11 col-xs-10">GRAINS
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-12 item-name" >
+                        <input type="text" id="name-veg">
+                        <input type="submit" value="Add" onclick="addVeg()" onclick="clear()" id="submit">
+                    </div>
                 </div>
-                <div class="col-md-1 col-xs-1 icon-move">
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                </div>
-            </button>
-<div class="panel">
-<form>
-    <div class=" food-holder">
-        <div class="row">
-            <div class="col-xs-2"></div>
-            <div class="col-md-2 col-xs-8 food-name">           <strong>Enter a Grain:</strong>
             </div>
-         </div>
-        
-        <div class="row">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-12 item-name" >
-            <input type="text" id="name-grain">
-                <input type="submit" value="Add" onclick="addGrain()" onclick="clear()" id="submit">
-            </div>
-            
-        </div>
-  
-        
-        
-         
-    
+        </form>
     </div>
-   
-    </form>
-</div>
+
+    <button class="accordion">
+        <div class="col-md-11 col-xs-10">FRUITS</div>
+        <div class="col-md-1 col-xs-1 icon-move">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+    </button>
+    
+    <div class="panel">
+        <form>
+            <div class=" food-holder">
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div class="col-md-2 col-xs-8 food-name">                       <strong>Enter a Fruit:</strong>
+                    </div>
+                 </div>
+
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-12 item-name" >
+                        <input type="text" id="name-fruit">
+                        <input type="submit" value="Add" onclick="addFruit()" onclick="clear()" id="submit">
+                    </div>
+                </div>     
+            </div>
+        </form>
+    </div>
+    
+    <button class="accordion">
+        <div class="col-md-11 col-xs-10">GRAINS</div>
+        <div class="col-md-1 col-xs-1 icon-move">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+    </button>
+    
+    <div class="panel">
+        <form>
+            <div class=" food-holder">
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div class="col-md-2 col-xs-8 food-name">                       <strong>Enter a Grain:</strong>
+                    </div>
+                 </div>
+
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-12 item-name" >
+                        <input type="text" id="name-grain">
+                        <input type="submit" value="Add" onclick="addGrain()" onclick="clear()" id="submit">
+                    </div> 
+                </div>     
+            </div>
+        </form>
+    </div>
             
     <button class="accordion">
-        <div class="col-md-11 col-xs-10">DAIRY
-        </div>
+        <div class="col-md-11 col-xs-10">DAIRY</div>
         <div class="col-md-1 col-xs-1 icon-move">
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </div>
-    </button>
+    </button>         
             
+    <div class="panel">
+       <form>
+            <div class=" food-holder">
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div class="col-md-2 col-xs-8 food-name">
+                        <strong>Enter a Dairy:</strong>
+                    </div>
+                 </div>
+
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-12 item-name" >
+                        <input type="text" id="name-dairy">
+                        <input type="submit" value="Add" onclick="addDairy()" onclick="clear()" id="submit">
+                    </div>  
+                </div>
+            </div> 
+        </form>
+    </div>    
             
-<div class="panel">
-   <form>
-    <div class=" food-holder">
-        <div class="row">
-            <div class="col-xs-2"></div>
-            <div class="col-md-2 col-xs-8 food-name">           <strong>Enter a Dairy:</strong>
-            </div>
-         </div>
-        
-        <div class="row">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-12 item-name" >
-            <input type="text" id="name-dairy">
-                <input type="submit" value="Add" onclick="addDairy()" onclick="clear()" id="submit">
-            </div>
-            
-        </div>
-  
-        
-        
-         
-    
-    </div>
-   
-    </form>
-</div>    
-            
- <button class="accordion">
-        <div class="col-md-11 col-xs-10">MEATS
-        </div>
+    <button class="accordion">
+        <div class="col-md-11 col-xs-10">MEATS</div>
         <div class="col-md-1 col-xs-1 icon-move">
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </div>
-    </button>
+    </button>      
             
-            
-<div class="panel">
-    <form>
-    <div class=" food-holder">
-        <div class="row">
-            <div class="col-xs-2"></div>
-            <div class="col-md-2 col-xs-8 food-name">           <strong>Enter a Meat:</strong>
-            </div>
-         </div>
-        
-        <div class="row">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-12 item-name" >
-            <input type="text" id="name-meat">
-                <input type="submit" value="Add" onclick="addMeat()" onclick="clear()" id="submit">
-            </div>
-            
-        </div>
-  
-        
-        
-         
-    
-    </div>
-   
-    </form>
-</div>        
+    <div class="panel">
+        <form>
+            <div class=" food-holder">
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div class="col-md-2 col-xs-8 food-name">
+                        <strong>Enter a Meat:</strong>
+                    </div>
+                 </div>
 
-        
- 
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-12 item-name" >
+                        <input type="text" id="name-meat">
+                        <input type="submit" value="Add" onclick="addMeat()" onclick="clear()" id="submit">
+                    </div>  
+                </div>
+            </div> 
+        </form>
+    </div>        
     
-<!-- accordion function -->  
-        
-<script>
+</main>
     
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    }
-}
-</script>
-    </main>
-           <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <!-- Preloader -->
     <script type="text/javascript">
@@ -426,15 +368,24 @@ for (i = 0; i < acc.length; i++) {
         });
         }
     </script>
+    
+    <!-- accordion function -->        
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function(){
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            }
+        }
+    </script>
         
-    </body>
-</html>
-    
-    
-    
-    
-    
-    
-    
-    
-    
+</body>
+</html>  
