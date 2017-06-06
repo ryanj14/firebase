@@ -1,39 +1,21 @@
-
-/*Nav CSS*/
-
-
 .user-icon {
     text-align: right;
     padding-top:8px;
 }
 
-.navbar{
+.navbar {
     background-color:#8CC63F;
     margin-bottom: 0 !important;
 }
 
-.menu-container{ 
+.menu-container { 
     font-size:30px;
     color:white;
 }
 
 .dropdown-toggle:active, .open .dropdown-toggle {
-        background:#FFF !important; 
-        color:#000 !important;
-    }
+    background:#FFF !important; 
+    color:#000 !important;
+}
 
-.dropdown{padding-top:5px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.dropdown {padding-top:5px;}
